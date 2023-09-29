@@ -1,0 +1,62 @@
+@import "color";
+@import "reset";
+@import "mixin";
+
+header {
+  .hdf-header {
+    background-color: $back-shadow;
+    .hdf-menu {
+      display: flex;
+      align-items: center;
+    //   justify-content: end;
+
+      & > .hdf-menu-list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        & > .hdf-menu-home {
+          & > .hdf-menu-home-link {
+            @include circle(40px, $style-special, $style-white);
+
+            i {
+              font-size: 1rem;
+            }
+          }
+        }
+        & > .hdf-menu-item {
+          .hdf-menu-item-link {
+            color: $style-white;
+            font-weight: 600;
+            margin: 0 0.5rem;
+          }
+        }
+      }
+      .account {
+        display: flex;
+        align-items: center;
+
+        & > .account-list {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          margin: 0;
+
+          & > .account-item {
+            margin: 0 0.5rem;
+
+            & > .account-link {
+              display: inline-block;
+              color: $style-white;
+              width: max-content;
+            }
+
+            & > .lock {
+              background-color: $style-special;
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

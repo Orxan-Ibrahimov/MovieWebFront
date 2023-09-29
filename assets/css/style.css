@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+header .hdf-header {
+  background-color: #212529;
+}
+header .hdf-header .hdf-menu {
+  display: flex;
+  align-items: center;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-home > .hdf-menu-home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #dc3545;
+  border-radius: 50%;
+  color: #fff;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-home > .hdf-menu-home-link i {
+  font-size: 1rem;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item .hdf-menu-item-link {
+  color: #fff;
+  font-weight: 600;
+  margin: 0 0.5rem;
+}
+header .hdf-header .hdf-menu .account {
+  display: flex;
+  align-items: center;
+}
+header .hdf-header .hdf-menu .account > .account-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+header .hdf-header .hdf-menu .account > .account-list > .account-item {
+  margin: 0 0.5rem;
+}
+header .hdf-header .hdf-menu .account > .account-list > .account-item > .account-link {
+  display: inline-block;
+  color: #fff;
+  width: max-content;
+}
+header .hdf-header .hdf-menu .account > .account-list > .account-item > .lock {
+  background-color: #dc3545;
+  padding: 0.5rem;
+}/*# sourceMappingURL=style.css.map */
