@@ -62,5 +62,87 @@ header .hdf-header .hdf-menu .account > .account-list > .account-item > .account
 }
 header .hdf-header .hdf-menu .account > .account-list > .account-item > .lock {
   background-color: #dc3545;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+header .hdf-header .hdf-menu .account > .account-list > .account-item > .lock:hover {
+  background-color: #bb2d3b;
+}
+
+main > .container > .row {
+  background-color: #191d20;
+}
+main > .container > .row #upcoming-movies .row .upcoming {
+  background-color: #212529;
+}
+main > .container > .row #upcoming-movies .row .upcoming .upcoming-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > .container > .row #upcoming-movies .row .upcoming .upcoming-card .upcoming-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  background-color: none;
+  border-radius: 50%;
+  color: none;
+  border: 3px solid #dc3545;
+  position: relative;
+}
+main > .container > .row #upcoming-movies .row .upcoming .upcoming-card .upcoming-image img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  background-color: none;
+  border-radius: 50%;
+  color: none;
+  overflow: hidden;
+}
+main > .container > .row #upcoming-movies .row .upcoming .upcoming-card .upcoming-image .upcoming-date {
+  position: absolute;
+  bottom: 0;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: small;
+  margin: 0;
+  padding: 0.2rem;
+  transform: translateY(25%);
+}
+main > .container > .row #upcoming-movies .row .upcoming .upcoming-card .upcoming-link {
+  color: #fff;
+  transition: color 0.4s;
+  margin: 0.5rem 0;
+}
+main > .container > .row #upcoming-movies .row .upcoming .upcoming-card .upcoming-link:hover {
+  color: #ff675b;
+}
+main > .container > .row .hdf-heading {
+  display: flex;
+  justify-content: space-between;
+}
+main > .container > .row .hdf-heading .hdf-heading-title {
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  min-width: max-content;
+  background-color: #212529;
+}
+main > .container > .row .hdf-heading .hdf-heading-title i {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+main > .container > .row .hdf-heading .hdf-link {
+  color: #fff;
+  width: 100%;
+  font-weight: 600;
+  transition: color 0.3s;
+  border-bottom: 1px solid #4d5154;
+  text-align: end;
+}
+main > .container > .row .hdf-heading .hdf-link:hover {
+  color: #ff675b;
 }/*# sourceMappingURL=style.css.map */

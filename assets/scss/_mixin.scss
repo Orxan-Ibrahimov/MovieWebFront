@@ -1,4 +1,4 @@
-@mixin circle($size, $bg-color, $color) {
+@mixin circle($size, $bg-color:none, $color: none) {
   display: flex;
   justify-content: center;
   align-items: center;
