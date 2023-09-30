@@ -1,11 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-ul,ol{
-    list-style: none;
+ul,
+ol {
+  list-style: none;
+}
+.owl-carousel {
+  margin: 0;
+  .owl-item {
+    margin: 0 !important;
+  }
+}
+
+.owl-nav {
+  & > .owl-prev {
+    font-size: 3rem;
+    color: red;
+    background-color: blue;
+  }
 }

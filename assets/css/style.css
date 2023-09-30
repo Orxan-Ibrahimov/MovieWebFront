@@ -8,8 +8,22 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
+}
+
+.owl-carousel {
+  margin: 0;
+}
+.owl-carousel .owl-item {
+  margin: 0 !important;
+}
+
+.owl-nav > .owl-prev {
+  font-size: 3rem;
+  color: red;
+  background-color: blue;
 }
 
 header .hdf-header {
@@ -122,6 +136,7 @@ main > .container > .row #upcoming-movies .row .upcoming .upcoming-card .upcomin
 }
 main > .container > .row #latest-movies {
   border-top: 3px solid #dc3545;
+  padding: 0;
 }
 main > .container > .row .hdf-heading {
   display: flex;
@@ -157,6 +172,7 @@ main > .container > .row .latest-movies {
 }
 main > .container > .row .latest-movies > img {
   opacity: 0.8;
+  height: 370px;
 }
 main > .container > .row .latest-movies .details {
   position: absolute;
@@ -196,6 +212,10 @@ main > .container > .row .latest-movies .details .annotation .genres .category {
   padding: 0.4rem 0.5rem;
   border-radius: 10%;
   margin: 0 0.2rem;
+}
+main > .container > .row .latest-movies .details img {
+  width: 25px !important;
+  height: 25px !important;
 }
 main > .container > .row .latest-movies:hover > img {
   opacity: 0.4;

@@ -114,6 +114,7 @@ main {
       }
       #latest-movies{
         border-top: 3px solid $style-special;
+        padding: 0;
       }
       .hdf-heading {
         display: flex;
@@ -153,6 +154,7 @@ main {
 
         & > img {
           opacity: 0.8;
+          height: 370px;
         }
 
         .details {
@@ -198,6 +200,11 @@ main {
                 margin: 0 0.2rem;
               }
             }
+          }
+
+          img{
+            width: 25px !important;
+            height: 25px !important;
           }
         }
 
