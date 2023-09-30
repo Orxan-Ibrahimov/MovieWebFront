@@ -120,6 +120,9 @@ main > .container > .row #upcoming-movies .row .upcoming .upcoming-card .upcomin
 main > .container > .row #upcoming-movies .row .upcoming .upcoming-card .upcoming-link:hover {
   color: #ff675b;
 }
+main > .container > .row #latest-movies {
+  border-top: 3px solid #dc3545;
+}
 main > .container > .row .hdf-heading {
   display: flex;
   justify-content: space-between;
@@ -145,4 +148,62 @@ main > .container > .row .hdf-heading .hdf-link {
 }
 main > .container > .row .hdf-heading .hdf-link:hover {
   color: #ff675b;
+}
+main > .container > .row .latest-movies {
+  position: relative;
+  display: block;
+  transition: 0.3s;
+  height: 100%;
+}
+main > .container > .row .latest-movies > img {
+  opacity: 0.8;
+}
+main > .container > .row .latest-movies .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+main > .container > .row .latest-movies .details p {
+  font-size: small;
+  font-weight: 600;
+  margin: 0;
+}
+main > .container > .row .latest-movies .details .rate {
+  color: #ffc107;
+}
+main > .container > .row .latest-movies .details .year {
+  transition: color 0.3s;
+}
+main > .container > .row .latest-movies .details .annotation {
+  display: none;
+}
+main > .container > .row .latest-movies .details .annotation .caption {
+  text-align: center;
+  padding: 0.5rem;
+  height: 250px;
+  overflow-y: hidden;
+}
+main > .container > .row .latest-movies .details .annotation .genres {
+  display: flex;
+  justify-content: center;
+}
+main > .container > .row .latest-movies .details .annotation .genres .category {
+  font-size: x-small;
+  font-weight: 700;
+  background-color: #212529;
+  padding: 0.4rem 0.5rem;
+  border-radius: 10%;
+  margin: 0 0.2rem;
+}
+main > .container > .row .latest-movies:hover > img {
+  opacity: 0.4;
+  filter: blur(4px);
+}
+main > .container > .row .latest-movies:hover .details .year {
+  color: #ff675b;
+}
+main > .container > .row .latest-movies:hover .details .annotation {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

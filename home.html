@@ -1,165 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/icons/logo-icon-hdf.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-    <script src="https://kit.fontawesome.com/8a6894c100.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/icons/logo-icon-hdf.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8a6894c100.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="assets/css/style.min.css" />
     <title>Hdfilmcehennemi | Film izle | HD Film izle</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container hdf-header">
-            <div class="row">
-                <div class="col-12 col-lg-3 border border-dark">
-                    <a href="#" class="nav-brand">
-                        <img src="assets/images/logo-hdf.png" alt="hdf" />
-                    </a>
-                </div>
-                <div class="col-lg-9 hdf-menu d-none d-lg-flex justify-xl-end">
-                    <ul class="hdf-menu-list">
-                        <li class="hdf-menu-home">
-                            <a href="#" class="hdf-menu-home-link">
-                                <i class="fa-solid fa-house"></i>
-                            </a>
-                        </li>
-                        <li class="hdf-menu-item">
-                            <a href="#" class="hdf-menu-item-link">
-                                Filmler
-                            </a>
-                        </li>                        
-                        <li class="hdf-menu-item">
-                            <a href="#" class="hdf-menu-item-link">
-                                Diziler
-                            </a>
-                        </li>        
-                        <li class="hdf-menu-item">
-                            <a href="#" class="hdf-menu-item-link">
-                                Yapim Yili <i class="fa-solid fa-caret-down"></i>
-                            </a>
-                        </li>        
-                        <li class="hdf-menu-item">
-                            <a href="#" class="hdf-menu-item-link">
-                                Seri Filmler
-                            </a>
-                        </li>        
-                    </ul>
-                    <div class="account">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Film veya Dizi Ara" />
-                        </div>
-                        <ul class="account-list">
-                            <li class="account-item">
-                                <a href="#" class="account-link">Kayit Ol</a>
-                            </li>
-                            <li class="account-item">
-                                <a href="#" class="account-link lock rounded"><i class="fa-solid fa-lock"></i> Giris Yap</a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </div>
+      <div class="container hdf-header">
+        <div class="row">
+          <div class="col-12 col-lg-3 border border-dark">
+            <a href="#" class="nav-brand">
+              <img src="assets/images/logo-hdf.png" alt="hdf" />
+            </a>
+          </div>
+          <div class="col-lg-9 hdf-menu d-none d-lg-flex justify-xl-end">
+            <ul class="hdf-menu-list">
+              <li class="hdf-menu-home">
+                <a href="#" class="hdf-menu-home-link">
+                  <i class="fa-solid fa-house"></i>
+                </a>
+              </li>
+              <li class="hdf-menu-item">
+                <a href="#" class="hdf-menu-item-link"> Filmler </a>
+              </li>
+              <li class="hdf-menu-item">
+                <a href="#" class="hdf-menu-item-link"> Diziler </a>
+              </li>
+              <li class="hdf-menu-item">
+                <a href="#" class="hdf-menu-item-link">
+                  Yapim Yili <i class="fa-solid fa-caret-down"></i>
+                </a>
+              </li>
+              <li class="hdf-menu-item">
+                <a href="#" class="hdf-menu-item-link"> Seri Filmler </a>
+              </li>
+            </ul>
+            <div class="account">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Film veya Dizi Ara"
+                />
+              </div>
+              <ul class="account-list">
+                <li class="account-item">
+                  <a href="#" class="account-link">Kayit Ol</a>
+                </li>
+                <li class="account-item">
+                  <a href="#" class="account-link lock rounded"
+                    ><i class="fa-solid fa-lock"></i> Giris Yap</a
+                  >
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
     </header>
     <main>
-       <div class="container">
+      <div class="container">
         <div class="row">
-             <section id="upcoming-movies">
+          <section id="latest-movies">
             <div class="container">
-                <div class="row py-3">
-                    <div class="col-12 ps-0">
-                        <div class="hdf-heading">
-                            <p class="hdf-heading-title rounded-top"><i class="fa-brands fa-youtube"></i> Yakında Gelecek Filmler</p>
-                            <a href="#" class="hdf-link">Tüm Fragmanlar</a>
+              <div class="row">
+                <div class="col">
+                  <a href="#" class="latest-movies">
+                    <img
+                      src="assets/images/movies/IAmRage.jpeg"
+                      class="w-100 h-100"
+                      alt="IAmRage"
+                    />
+                    <div class="details">
+                      <div class="annotation">
+                        <p class="caption">
+                          Kötü niyetli bir kan ticaretine bulaşmış eski bir
+                          tarikat, şiddetli ve şok edici bir geçmişi olan genç
+                          bir kadını kaçırmak gibi ölümcül bir hata yapar.
+                        </p>
+                        <div class="genres">
+                          <span class="category">Aksiyon</span>
                         </div>
+                      </div>
+
+                      <div class="d-flex justify-content-around">
+                        <p class="year">2023</p>
+                        <p class="comments">
+                          <i class="fa-solid fa-comment"></i> 4
+                        </p>
+                        <p class="rate"><i class="fa-solid fa-star"></i> 5.2</p>
+                      </div>
+
+                      <h6 class="mx-4">Deadpool-3</h6>
+                      <div class="d-flex align-items-center my-2 mx-4">
+                        <img
+                          src="assets/images/icons/tr.png"
+                          width="25"
+                          height="25"
+                          alt="tr"
+                        />
+                        <span class="mx-2 text-white"
+                          ><i class="fa-solid fa-closed-captioning"></i
+                        ></span>
+                        <p class="small">Dublaj & Altyazılı</p>
+                      </div>
                     </div>
-                    <div class="col-12 upcoming">
-                        <div class="row py-4">
-                            <div class="col-2">
-                                <div class="d-flex justify-content-center">
-                                 <div class="upcoming-card">
-                                     <a href="#" class="upcoming-image">
-                                         <img src="assets/images/movies/barbie.jpeg" alt="barbie" />
-                                         <p class="upcoming-date rounded">20 Ekim</p>
-                                     </a> 
-                                     <a href="#" class="upcoming-link">Barbie</a>
-                                 </div>
-                                </div>
-                             </div>
-                            <div class="col-2">
-                                <div class="d-flex justify-content-center">
-                                 <div class="upcoming-card">
-                                     <a href="#" class="upcoming-image">
-                                         <img src="assets/images/movies/bro.jpeg" alt="bro" />
-                                         <p class="upcoming-date rounded">20 Ekim</p>
-                                     </a> 
-                                     <a href="#" class="upcoming-link">Bro</a>
-                                 </div>
-                                </div>
-                             </div>
-                             <div class="col-2">
-                                <div class="d-flex justify-content-center">
-                                 <div class="upcoming-card">
-                                     <a href="#" class="upcoming-image">
-                                         <img src="assets/images/movies/captain-america-civil-war.jpeg" alt="captain-america-civil-war" />
-                                         <p class="upcoming-date rounded">20 Ekim</p>
-                                     </a> 
-                                     <a href="#" class="upcoming-link">Captain America: Civil War</a>
-                                 </div>
-                                </div>
-                             </div>
-                             <div class="col-2">
-                                <div class="d-flex justify-content-center">
-                                 <div class="upcoming-card">
-                                     <a href="#" class="upcoming-image">
-                                         <img src="assets/images/movies/deadpool-3.jpg" alt="deadpool-3" />
-                                         <p class="upcoming-date rounded">20 Ekim</p>
-                                     </a> 
-                                     <a href="#" class="upcoming-link">Deadpool 3</a>
-                                 </div>
-                                </div>
-                             </div>
-                             <div class="col-2">
-                                <div class="d-flex justify-content-center">
-                                 <div class="upcoming-card">
-                                     <a href="#" class="upcoming-image">
-                                         <img src="assets/images/movies/IAmRage.jpeg" alt="IAmRage" />
-                                         <p class="upcoming-date rounded">20 Ekim</p>
-                                     </a> 
-                                     <a href="#" class="upcoming-link">I Am Rage</a>
-                                 </div>
-                                </div>
-                             </div>
-                             <div class="col-2">
-                                <div class="d-flex justify-content-center">
-                                 <div class="upcoming-card">
-                                     <a href="#" class="upcoming-image">
-                                         <img src="assets/images/movies/spider-verse2.jpeg" alt="spider-verse2" />
-                                         <p class="upcoming-date rounded">20 Ekim</p>
-                                     </a> 
-                                     <a href="#" class="upcoming-link">Spider Man: spider Verse 2</a>
-                                 </div>
-                                </div>
-                             </div>
-                        </div>
-                    </div>
+                  </a>
                 </div>
+                <div class="col">
+                  <a href="#" class="latest-movies">
+                    <img
+                      src="assets/images/movies/bottoms.jpeg"
+                      class="w-100 h-100"
+                      alt="bottoms"
+                    />
+                    <div class="details">
+                      <div class="annotation">
+                        <p class="caption">
+                          David Fincher'ın Dövüş Kulübü'ne (Fight Club) gönderme
+                          yapan Bottoms filmi, ilk birlikte olma deneyimini
+                          amigo kızlarla yaşamak için bir dövüş kulübü kuran iki
+                          genç kızı konu alıyor. Bu iki gencin tuhaf planları
+                          işe yarar ve dövüş kulübü beklenenden daha çok ilgi
+                          görür, çok geçmeden de okuldaki en popüler kızlar
+                          nefsi müdafaa adına birbirlerini dövmeye başlar. Ancak
+                          PJ ve Josie, planları açığa çıkmadan önce kendilerini
+                          büyük bir işin içinde bulurlar ve bir çıkış yoluna
+                          ihtiyaç duyarlar.
+                        </p>
+                        <div class="genres">
+                          <span class="category">Komedi</span>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-around">
+                        <p class="year">2023</p>
+                        <p class="comments">
+                          <i class="fa-solid fa-comment"></i> 15
+                        </p>
+                        <p class="rate"><i class="fa-solid fa-star"></i> 7.1</p>
+                      </div>
+
+                      <h6 class="mx-4">Bottoms</h6>
+                      <div class="d-flex align-items-center my-2 mx-4">
+                        <span class="me-2 text-white"
+                          ><i class="fa-solid fa-closed-captioning"></i
+                        ></span>
+                        <p class="small">Türkçe Altyazılı</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="#" class="latest-movies">
+                    <img
+                      src="assets/images/movies/barbie.jpeg"
+                      class="w-100 h-100"
+                      alt="barbie"
+                    />
+                    <div class="details">
+                      <div class="annotation">
+                        <p class="caption">
+                          Barbie, yaşadığı dünyanın koşullarına uymayan bir
+                          kadındır. Yaşadığı dünyanın "mükemmel kadın" imajına
+                          uzak olduğunu farkeden Barbie, yaşadığı fantastik
+                          dünyadan dışlanır ve kimsenin iletişim kurmak
+                          istemediği biri halini alır. Uyum sağlayabileceği bir
+                          dünya bulma umuduyla bizim yaşadığımız gerçek dünyaya
+                          bir yolculuğa çıkar. Bu yeni dünyada, onu kendi evinde
+                          dışlanmış kılan farklılıkları, onu özel kılan
+                          avantajlara dönüşür.
+                        </p>
+                        <div class="genres">
+                          <span class="category">Macera</span>
+                          <span class="category">Komedi</span>
+                          <span class="category">Fantastik</span>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-around">
+                        <p class="year">2023</p>
+                        <p class="comments">
+                          <i class="fa-solid fa-comment"></i> 259
+                        </p>
+                        <p class="rate"><i class="fa-solid fa-star"></i> 7.1</p>
+                      </div>
+
+                      <h6 class="mx-4">Barbie</h6>
+                      <div class="d-flex align-items-center my-2 mx-4">
+                        <img
+                          src="assets/images/icons/tr.png"
+                          width="25"
+                          height="25"
+                          alt="tr"
+                        />
+                        <span class="mx-2 text-white"
+                          ><i class="fa-solid fa-closed-captioning"></i
+                        ></span>
+                        <p class="small">Dublaj & Altyazılı</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="#" class="latest-movies">
+                    <img
+                      src="assets/images/series/gen-v.jpg"
+                      class="w-100 h-100"
+                      alt="gen-v"
+                    />
+                    <div class="details">
+                      <div class="annotation">
+                        <p class="caption">
+                          The Boys spin-off'u Gen V, üniversiteye giden genç
+                          süper kahramanlara odaklanacak. Süper kahraman
+                          olabilmek için çeşitli testlerden geçen gençler;
+                          fiziksel, cinsel ve ahlaki sınırlarını zorlayan bu
+                          testlerin ardından, en iyi şehirlere yerleşebilmek
+                          için birbirleriyle yarışacaklar.
+                        </p>
+                        <div class="genres">
+                          <span class="category">Aksiyon</span>
+                          <span class="category">Macera</span>
+                          <span class="category">Komedi</span>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-around">
+                        <p class="year">2023</p>
+                        <p class="comments">
+                          <i class="fa-solid fa-comment"></i> 6
+                        </p>
+                        <p class="rate"><i class="fa-solid fa-star"></i> 0.0</p>
+                      </div>
+
+                      <h6 class="mx-4">Gen V</h6>
+                      <div class="d-flex align-items-center my-2 mx-4">
+                        
+                        <span class="me-2 text-warning">
+                          <i class="fa-solid fa-tv"></i>
+                        </span>
+                        <p class="small"> Yabancı Dizi</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="#" class="latest-movies">
+                    <img
+                      src="assets/images/movies/spider-verse2.jpeg"
+                      class="w-100 h-100"
+                      alt="spider-verse2"
+                    />
+                    <div class="details">
+                      <div class="annotation">
+                        <p class="caption">
+                          Spider-Man: Into the Spider-Verse 2, radyoaktif bir
+                          örümcek tarafından ısırılmasıyla bambaşka bir dünyaya
+                          adım atıp, özel yeteneklerle donanan Miles Morales'in
+                          maceralarını konu ediyor. Spider-Man: Into The
+                          Spider-Verse'ün devam halkası olan yapımın yönetmen
+                          koltuğunda Joaquim Dos Santos oturuyor.
+                        </p>
+                        <div class="genres">
+                          <span class="category">Animasyon</span>
+                          <span class="category">Aksiyon</span>
+                          <span class="category">Macera</span>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-around">
+                        <p class="year">2023</p>
+                        <p class="comments">
+                          <i class="fa-solid fa-comment"></i> 251
+                        </p>
+                        <p class="rate"><i class="fa-solid fa-star"></i> 8.7</p>
+                      </div>
+
+                      <h6 class="mx-4">Spider-Man: Across ...</h6>
+                      <div class="d-flex align-items-center my-2 mx-4">
+                        <img
+                          src="assets/images/icons/tr.png"
+                          width="25"
+                          height="25"
+                          alt="tr"
+                        />
+                        <span class="mx-2 text-white"
+                          ><i class="fa-solid fa-closed-captioning"></i
+                        ></span>
+                        <p class="small">Dublaj & Altyazılı</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
-        </section>
-        <section></section>
-        <section>
+          </section>
+          <section id="upcoming-movies">
             <div class="container">
-                <div class="row">
-                    <div class="col-9"></div>
-                    <div class="col-3"></div>
+              <div class="row py-3">
+                <div class="col-12 ps-0">
+                  <div class="hdf-heading">
+                    <p class="hdf-heading-title rounded-top">
+                      <i class="fa-brands fa-youtube"></i> Yakında Gelecek
+                      Filmler
+                    </p>
+                    <a href="#" class="hdf-link">Tüm Fragmanlar</a>
+                  </div>
                 </div>
+                <div class="col-12 upcoming">
+                  <div class="row py-4">
+                    <div class="col-2">
+                      <div class="d-flex justify-content-center">
+                        <div class="upcoming-card">
+                          <a href="#" class="upcoming-image">
+                            <img
+                              src="assets/images/movies/barbie.jpeg"
+                              alt="barbie"
+                            />
+                            <p class="upcoming-date rounded">20 Ekim</p>
+                          </a>
+                          <a href="#" class="upcoming-link">Barbie</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="d-flex justify-content-center">
+                        <div class="upcoming-card">
+                          <a href="#" class="upcoming-image">
+                            <img
+                              src="assets/images/movies/bro.jpeg"
+                              alt="bro"
+                            />
+                            <p class="upcoming-date rounded">20 Ekim</p>
+                          </a>
+                          <a href="#" class="upcoming-link">Bro</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="d-flex justify-content-center">
+                        <div class="upcoming-card">
+                          <a href="#" class="upcoming-image">
+                            <img
+                              src="assets/images/movies/captain-america-civil-war.jpeg"
+                              alt="captain-america-civil-war"
+                            />
+                            <p class="upcoming-date rounded">20 Ekim</p>
+                          </a>
+                          <a href="#" class="upcoming-link"
+                            >Captain America: Civil War</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="d-flex justify-content-center">
+                        <div class="upcoming-card">
+                          <a href="#" class="upcoming-image">
+                            <img
+                              src="assets/images/movies/deadpool-3.jpg"
+                              alt="deadpool-3"
+                            />
+                            <p class="upcoming-date rounded">20 Ekim</p>
+                          </a>
+                          <a href="#" class="upcoming-link">Deadpool 3</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="d-flex justify-content-center">
+                        <div class="upcoming-card">
+                          <a href="#" class="upcoming-image">
+                            <img
+                              src="assets/images/movies/IAmRage.jpeg"
+                              alt="IAmRage"
+                            />
+                            <p class="upcoming-date rounded">20 Ekim</p>
+                          </a>
+                          <a href="#" class="upcoming-link">I Am Rage</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="d-flex justify-content-center">
+                        <div class="upcoming-card">
+                          <a href="#" class="upcoming-image">
+                            <img
+                              src="assets/images/movies/spider-verse2.jpeg"
+                              alt="spider-verse2"
+                            />
+                            <p class="upcoming-date rounded">20 Ekim</p>
+                          </a>
+                          <a href="#" class="upcoming-link"
+                            >Spider Man: spider Verse 2</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </section>
+          <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-9"></div>
+                <div class="col-3"></div>
+              </div>
+            </div>
+          </section>
         </div>
-       </div>
+      </div>
     </main>
     <footer></footer>
-</body>
+  </body>
 </html>
