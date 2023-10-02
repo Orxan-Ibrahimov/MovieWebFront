@@ -153,11 +153,19 @@ main > .container > .row .hdf-heading > .hdf-heading-title {
 main > .container > .row .hdf-heading > .hdf-heading-title i {
   color: rgba(255, 255, 255, 0.5019607843);
 }
-main > .container > .row .hdf-heading > .hdf-heading-rate {
+main > .container > .row .hdf-heading > .hdf-heading-icon {
   width: 100%;
   text-align: end;
   border-bottom: 1px solid #4d5154;
+}
+main > .container > .row .hdf-heading > .hdf-heading-rate {
   color: #ffc107;
+}
+main > .container > .row .hdf-heading > .hdf-heading-category {
+  color: #0dcaf0;
+}
+main > .container > .row .hdf-heading > .hdf-heading-special {
+  color: #dc3545;
 }
 main > .container > .row .hdf-heading .hdf-link {
   color: #fff;
@@ -345,5 +353,14 @@ main > .container > .row .movies-for-languages a img {
   height: 20px;
 }
 main > .container > .row .movies-for-languages a:hover {
+  opacity: 0.7;
+}
+main > .container > .row .movies-for-category {
+  color: #fff;
+  background-color: #212529;
+  padding: 0.5rem 1rem;
+  padding-right: 0;
+}
+main > .container > .row .movies-for-category:hover {
   opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */

@@ -135,11 +135,21 @@ main {
           }
         }
 
-        & > .hdf-heading-rate {
+        & > .hdf-heading-icon {
           width: 100%;
           text-align: end;
           border-bottom: 1px solid $background-page;
+        }
+        & > .hdf-heading-rate {          
           color: $rate;
+        }
+
+        & > .hdf-heading-category {          
+          color: $category;
+        }
+
+        & > .hdf-heading-special {          
+          color: $style-special;
         }
 
         .hdf-link {
@@ -345,23 +355,34 @@ main {
         }
       }
 
-      .movies-for-languages{
+      .movies-for-languages {
         display: flex;
         flex-direction: column;
-        a{
+        a {
           color: $style-white;
-          padding: .5rem 1rem;
+          padding: 0.5rem 1rem;
           font-size: medium;
           background-color: $back-shadow;
-          
-          img{
+
+          img {
             width: 20px;
             height: 20px;
           }
 
-          &:hover{
-            opacity: .7;
+          &:hover {
+            opacity: 0.7;
           }
+        }
+      }
+
+      .movies-for-category {
+        color: $style-white;
+        background-color: $back-shadow;
+        padding: 0.5rem 1rem;
+        padding-right: 0;
+
+        &:hover {
+          opacity: 0.7;
         }
       }
     }
