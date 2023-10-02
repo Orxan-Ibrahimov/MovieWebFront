@@ -226,4 +226,25 @@ main > .container > .row .latest-movies:hover .details .year {
 }
 main > .container > .row .latest-movies:hover .details .annotation {
   display: block;
+}
+main > .container > .row .announce {
+  background-color: #7a2933;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+}
+main > .container > .row .announce--btns {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #9b5f66;
+  border-bottom: 1px solid #9b5f66;
+  padding: 1rem 0;
+}
+main > .container > .row .announce--btns > .announce--btn {
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+  font-size: small;
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
 }/*# sourceMappingURL=style.css.map */

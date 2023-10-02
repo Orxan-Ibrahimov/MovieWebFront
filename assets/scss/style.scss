@@ -70,7 +70,7 @@ main {
     & > .row {
       background-color: $background;
 
-      #upcoming-movies {
+      #upcoming-movies {  
         .row {
           .upcoming {
             background-color: $back-shadow;
@@ -222,6 +222,33 @@ main {
             .annotation {
               display: block;
             }
+          }
+        }
+      }
+      .announce{
+        background-color: $announce;
+        color: $style-white;
+        border-radius: 5px;
+        padding: 1rem;
+        &--caption{
+          // display: flex;
+
+        }
+        &--btns{
+          display: flex;
+          justify-content: space-between;
+          border-top: 1px solid #9b5f66;
+          border-bottom: 1px solid #9b5f66;
+          padding: 1rem 0;
+
+          &> .announce--btn{
+            background-color: $style-white;
+            color: $announce-icon;
+            text-transform: uppercase;
+            font-size: small;
+            padding: .5rem 1rem;
+            border-radius: 50rem;
+
           }
         }
       }
