@@ -331,6 +331,9 @@ main > .container > .row .newMovieCard > .newMovieCard-body > .newMovieCard-capt
   height: 25px;
   margin-right: 0.5rem;
 }
+main > .container > .row .newMovieCard > .newMovieCard-body > .newMovieCard-caption > .subtitle-serie i {
+  color: #21744f;
+}
 main > .container > .row .newMovieCard > .newMovieCard-body > .newMovieCard-caption > .imdb {
   color: #ffc107;
   font-size: smaller;

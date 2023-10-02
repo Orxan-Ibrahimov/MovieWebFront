@@ -140,15 +140,15 @@ main {
           text-align: end;
           border-bottom: 1px solid $background-page;
         }
-        & > .hdf-heading-rate {          
+        & > .hdf-heading-rate {
           color: $rate;
         }
 
-        & > .hdf-heading-category {          
+        & > .hdf-heading-category {
           color: $category;
         }
 
-        & > .hdf-heading-special {          
+        & > .hdf-heading-special {
           color: $style-special;
         }
 
@@ -341,6 +341,12 @@ main {
                 width: 25px;
                 height: 25px;
                 margin-right: 0.5rem;
+              }
+            }
+
+            & > .subtitle-serie {
+              i {
+                color: $serie-icon;
               }
             }
             & > .imdb {
