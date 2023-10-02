@@ -70,7 +70,7 @@ main {
     & > .row {
       background-color: $background;
 
-      #upcoming-movies {  
+      #upcoming-movies {
         .row {
           .upcoming {
             background-color: $back-shadow;
@@ -112,7 +112,7 @@ main {
           }
         }
       }
-      #latest-movies{
+      #latest-movies {
         border-top: 3px solid $style-special;
         padding: 0;
       }
@@ -183,7 +183,7 @@ main {
 
             .caption {
               text-align: center;
-              padding: .5rem;
+              padding: 0.5rem;
               height: 250px;
               overflow-y: hidden;
             }
@@ -202,7 +202,7 @@ main {
             }
           }
 
-          img{
+          img {
             width: 25px !important;
             height: 25px !important;
           }
@@ -214,7 +214,6 @@ main {
             filter: blur(4px);
           }
           .details {
-            
             .year {
               color: $style-special-hover;
             }
@@ -225,30 +224,59 @@ main {
           }
         }
       }
-      .announce{
+      .announce {
         background-color: $announce;
         color: $style-white;
         border-radius: 5px;
         padding: 1rem;
-        &--caption{
-          // display: flex;
-
-        }
-        &--btns{
+       
+        &--btns {
+          text-align: center;
           display: flex;
           justify-content: space-between;
           border-top: 1px solid #9b5f66;
           border-bottom: 1px solid #9b5f66;
           padding: 1rem 0;
+          
 
-          &> .announce--btn{
+          & > .announce--btn {
             background-color: $style-white;
             color: $announce-icon;
             text-transform: uppercase;
             font-size: small;
-            padding: .5rem 1rem;
+            padding: 0.5rem 1rem;
             border-radius: 50rem;
+            margin: .5rem 0;
+          }
+        }
+      }
+      .movie-categorize {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        a {
+          text-align: center;
+          color: $style-white;
+          border-radius: 1rem;
+          padding: 0.5rem 0;
+          transition: .4s;
+          margin: .2rem 0;
+          font-weight: 700;
+        }
+        & > .movie-robot {
+          background-color: $style-special;
 
+          &:hover{
+            background-color: $style-special-dark;
+          }
+        }
+        & > .movie-order {
+          color: $movie-order;
+          border: 1px solid $movie-order;
+
+          &:hover{
+            background-color: $movie-order;
+            color: $style-white;
           }
         }
       }

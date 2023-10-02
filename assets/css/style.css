@@ -234,6 +234,7 @@ main > .container > .row .announce {
   padding: 1rem;
 }
 main > .container > .row .announce--btns {
+  text-align: center;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #9b5f66;
@@ -247,4 +248,33 @@ main > .container > .row .announce--btns > .announce--btn {
   font-size: small;
   padding: 0.5rem 1rem;
   border-radius: 50rem;
+  margin: 0.5rem 0;
+}
+main > .container > .row .movie-categorize {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+main > .container > .row .movie-categorize a {
+  text-align: center;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem 0;
+  transition: 0.4s;
+  margin: 0.2rem 0;
+  font-weight: 700;
+}
+main > .container > .row .movie-categorize > .movie-robot {
+  background-color: #dc3545;
+}
+main > .container > .row .movie-categorize > .movie-robot:hover {
+  background-color: #bb2d3b;
+}
+main > .container > .row .movie-categorize > .movie-order {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+main > .container > .row .movie-categorize > .movie-order:hover {
+  background-color: #6c757d;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
