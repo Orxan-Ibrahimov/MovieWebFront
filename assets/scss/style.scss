@@ -142,6 +142,7 @@ main {
           padding: 0.5rem 1rem;
           min-width: max-content;
           border: 1px solid transparent;
+          text-transform: capitalize;
 
           &:hover {
             border-color: $back-shadow;
@@ -454,15 +455,54 @@ main {
 
 footer {
   .about-us {
+    background-color: $footer-about;
+    padding: 2rem 1rem;
+    position: relative;
+    max-height: 200px;
+    overflow: hidden;
+
+    & > .about-title {
+      color: $sub-text;
+    }
+    & > .about-text {
+      color: $sub-text;
+      font-size: small;
+    }
+    &>.read-btn{
+      color: $sub-text;
+      background-color: #14171A;
+      padding: .5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 80%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(38 35 35 / 80%);
+      box-shadow: 5px 3px 14px 20px #5b5757a6;
+    }
+  }
+
+  .footer {
     background-color: $background;
     padding: 1rem;
 
-    .about-title {
-      color: $sub-text;
-    }
-    .about-text {
+    & > .footer-text {
       color: $sub-text;
       font-size: small;
+
+      a {
+        color: $style-white;
+      }
     }
   }
 }
