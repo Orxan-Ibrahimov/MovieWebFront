@@ -153,6 +153,17 @@ main > .container > .row .hdf-heading > .hdf-heading-title {
 main > .container > .row .hdf-heading > .hdf-heading-title i {
   color: rgba(255, 255, 255, 0.5019607843);
 }
+main > .container > .row .hdf-heading > .hdf-heading-link {
+  color: rgba(255, 255, 255, 0.5019607843);
+  font-weight: 600;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  min-width: max-content;
+  border: 1px solid transparent;
+}
+main > .container > .row .hdf-heading > .hdf-heading-link:hover {
+  border-color: #212529;
+}
 main > .container > .row .hdf-heading > .hdf-heading-icon {
   width: 100%;
   text-align: end;

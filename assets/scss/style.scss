@@ -135,6 +135,19 @@ main {
           }
         }
 
+        & > .hdf-heading-link{
+          color: $sub-text;
+          font-weight: 600;
+          margin: 0;
+          padding: 0.5rem 1rem;
+          min-width: max-content;
+          border: 1px solid transparent;
+
+          &:hover{
+            border-color: $back-shadow;
+          }
+        }
+
         & > .hdf-heading-icon {
           width: 100%;
           text-align: end;
