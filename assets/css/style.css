@@ -347,6 +347,13 @@ main > .container > .row .newMovieCard > .newMovieCard-body > .newMovieCard-capt
   height: 25px;
   margin-right: 0.5rem;
 }
+main > .container > .row .newMovieCard > .newMovieCard-body > .newMovieCard-caption > .subtitle-icon {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+main > .container > .row .newMovieCard > .newMovieCard-body > .newMovieCard-caption > .subtitle-icon img {
+  width: 25px;
+  height: 25px;
+}
 main > .container > .row .newMovieCard > .newMovieCard-body > .newMovieCard-caption > .subtitle-serie i {
   color: #21744f;
 }
@@ -356,6 +363,9 @@ main > .container > .row .newMovieCard > .newMovieCard-body > .newMovieCard-capt
 }
 main > .container > .row .newMovieCard:hover {
   background: rgba(255, 255, 255, 0.05);
+}
+main > .container > .row .newMovieCard-pill {
+  border-radius: 50rem;
 }
 main > .container > .row .movies-for-languages {
   display: flex;

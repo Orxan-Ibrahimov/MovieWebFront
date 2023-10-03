@@ -360,6 +360,15 @@ main {
                 width: 25px;
                 height: 25px;
                 margin-right: 0.5rem;
+              }              
+            }
+
+            & > .subtitle-icon {
+              color: $sub-text;
+
+              img{
+                width: 25px;
+                height: 25px;                
               }
             }
 
@@ -378,6 +387,10 @@ main {
         &:hover {
           background: $new-movie-hover;
         }
+      }
+
+      .newMovieCard-pill {
+        border-radius: 50rem;
       }
 
       .movies-for-languages {
@@ -419,12 +432,12 @@ main {
         padding: 2rem 0;
 
         & > .pagination-item {
-          margin: 0 .3rem;
+          margin: 0 0.3rem;
           & > .pagination-circle {
             @include circle(40px, $background-page, $style-white);
           }
 
-          .pagination-link{
+          .pagination-link {
             color: $style-white;
           }
         }
