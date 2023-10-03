@@ -360,15 +360,15 @@ main {
                 width: 25px;
                 height: 25px;
                 margin-right: 0.5rem;
-              }              
+              }
             }
 
             & > .subtitle-icon {
               color: $sub-text;
 
-              img{
+              img {
                 width: 25px;
-                height: 25px;                
+                height: 25px;
               }
             }
 
@@ -448,6 +448,21 @@ main {
           }
         }
       }
+    }
+  }
+}
+
+footer {
+  .about-us {
+    background-color: $background;
+    padding: 1rem;
+
+    .about-title {
+      color: $sub-text;
+    }
+    .about-text {
+      color: $sub-text;
+      font-size: small;
     }
   }
 }

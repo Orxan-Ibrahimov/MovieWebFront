@@ -418,4 +418,16 @@ main > .container > .row .pagination-list > .pagination-item .pagination-link {
 }
 main > .container > .row .pagination-list > .active > .pagination-link {
   background-color: #dc3545;
+}
+
+footer .about-us {
+  background-color: #191d20;
+  padding: 1rem;
+}
+footer .about-us .about-title {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+footer .about-us .about-text {
+  color: rgba(255, 255, 255, 0.5019607843);
+  font-size: small;
 }/*# sourceMappingURL=style.css.map */
