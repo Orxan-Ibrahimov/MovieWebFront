@@ -420,6 +420,53 @@ main > .container > .row .pagination-list > .pagination-item .pagination-link {
 main > .container > .row .pagination-list > .active > .pagination-link {
   background-color: #dc3545;
 }
+main > .container > .row .movie-details {
+  background-color: #212529;
+  padding: 1rem;
+}
+main > .container > .row .movie-details .movie-data {
+  display: flex;
+  flex-direction: column;
+}
+main > .container > .row .movie-details .movie-data > .movie-text {
+  color: #fff;
+}
+main > .container > .row .movie-details .movie-data > .movie-reference {
+  color: #dc3545;
+  font-weight: 700;
+}
+main > .container > .row .movie-details .movie-data > .movie-imdb {
+  color: #ffc107;
+}
+main > .container > .row .movie-details .movie-data > .movie-table > .movie-row {
+  color: rgba(255, 255, 255, 0.5019607843);
+  margin: 1rem 0;
+}
+main > .container > .row .movie-details .movie-data > .movie-table > .movie-row > .movie-badge {
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.2509803922);
+  color: #fff;
+  font-size: x-small;
+  font-weight: 700;
+  margin-left: 0.4rem;
+}
+main > .container > .row .movie-details .movie-data > .movie-table > .movie-row > a.movie-badge:hover {
+  color: #dc3545;
+}
+main > .container > .row .movie-details .movie-data > .movie-table > .movie-row .movie-pill {
+  color: #fff;
+  background-color: #3b4348;
+  border-radius: 50rem;
+  padding-right: 1rem;
+  margin: 0.5rem 0;
+  display: inline-block;
+}
+main > .container > .row .movie-details .movie-data > .movie-table > .movie-row .movie-pill img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
 
 footer .about-us {
   background-color: #212629;
@@ -435,7 +482,7 @@ footer .about-us > .about-text {
 }
 footer .about-us > .read-btn {
   color: rgba(255, 255, 255, 0.5019607843);
-  background-color: #14171A;
+  background-color: #14171a;
   padding: 0.5rem;
   position: absolute;
   top: 50%;

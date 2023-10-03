@@ -449,6 +449,64 @@ main {
           }
         }
       }
+
+      .movie-details {
+        background-color: $back-shadow;
+        padding: 1rem;
+        .movie-data {
+          display: flex;
+          flex-direction: column;
+
+          & > .movie-text {
+            color: $style-white;
+          }
+
+          & > .movie-reference {
+            color: $style-special;
+            font-weight: 700;
+          }
+
+          & > .movie-imdb {
+            color: $rate;
+          }
+          & > .movie-table {
+            & > .movie-row {
+              color: $sub-text;
+              margin: 1rem 0;
+
+              & > .movie-badge {
+                padding: 0.3rem;
+                border-radius: 0.3rem;
+                background-color: #ffffff40;
+                color: $style-white;
+                font-size: x-small;
+                font-weight: 700;
+                margin-left: 0.4rem;
+              }
+
+              & > a.movie-badge {
+                &:hover {
+                  color: $style-special;
+                }
+              }
+
+              .movie-pill {
+                color: $style-white;
+                background-color: $background-cast;
+                border-radius: 50rem;
+                padding-right: 1rem;
+                margin: 0.5rem 0;
+                display: inline-block;
+                img {
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -457,8 +515,7 @@ footer {
   .about-us {
     background-color: $footer-about;
     padding: 2rem 1rem;
-    position: relative;    
-    
+    position: relative;
 
     & > .about-title {
       color: $sub-text;
@@ -467,18 +524,15 @@ footer {
       color: $sub-text;
       font-size: small;
     }
-    &>.read-btn{
+    & > .read-btn {
       color: $sub-text;
-      background-color: #14171A;
-      padding: .5rem;
+      background-color: #14171a;
+      padding: 0.5rem;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
-
+      transform: translate(-50%, -50%);
     }
-
-    
   }
 
   .footer {
@@ -495,12 +549,12 @@ footer {
     }
   }
 
-  .makeBlur{
+  .makeBlur {
     max-height: 200px;
     overflow: hidden;
 
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       top: 80%;
       left: 0;
