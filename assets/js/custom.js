@@ -16,5 +16,9 @@ $(document).ready(function(){
     }
   })
 
-  console.log($('.owl-carousel .owl-nav'));
+ $('.read-btn').click(function (e) { 
+    e.preventDefault();
+    $('footer .about-us').removeClass('makeBlur');
+    $('.read-btn').remove();
+ });  
   });
