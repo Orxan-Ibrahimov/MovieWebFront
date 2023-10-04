@@ -26,6 +26,10 @@ ol {
   background-color: blue;
 }
 
+.bg-shadow {
+  background-color: #212529;
+}
+
 header .hdf-header {
   background-color: #212529;
 }
