@@ -66,6 +66,66 @@ ol {
   background-color: #bb2d3b;
 }
 
+.comments {
+  background-color: #212529;
+  padding: 1rem;
+}
+.comments .comment-card {
+  display: flex;
+  margin: 2.5rem 0;
+}
+.comments .comment-card > .comment-image img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: none;
+  border-radius: 50%;
+  color: none;
+}
+.comments .comment-card > .comment-body {
+  width: 100%;
+  margin: 0 1rem;
+}
+.comments .comment-card > .comment-body > .userdate {
+  display: flex;
+  justify-content: space-between;
+}
+.comments .comment-card > .comment-body > .userdate > .user {
+  color: #fff;
+  margin: 0;
+}
+.comments .comment-card > .comment-body > .userdate > .date {
+  color: #fff;
+  margin: 0;
+  font-size: smaller;
+}
+.comments .comment-card > .comment-body > .comment {
+  color: rgba(255, 255, 255, 0.5019607843);
+  margin-bottom: 0.25rem;
+}
+.comments .comment-card > .comment-body > .comment-events > .like {
+  color: #fff;
+  font-weight: 700;
+}
+.comments .comment-card > .comment-body > .comment-events > .like:hover {
+  color: #ff675b;
+}
+.comments .comment-card > .comment-body > .comment-events > .share {
+  color: rgba(255, 255, 255, 0.5019607843);
+  margin: 0 1rem;
+}
+.comments .comment-card > .comment-body > .comment-events > .share i {
+  transform: rotateY(180deg);
+}
+.comments .comment-card > .comment-body > .comment-events > .share:hover {
+  color: #ff675b !important;
+}
+.comments .comment-card > .comment-body > .comment-events:hover > .share {
+  color: #fff;
+}
+
 header .hdf-header {
   background-color: #212529;
 }

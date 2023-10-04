@@ -1,0 +1,67 @@
+.comments {
+  background-color: $back-shadow;
+  padding: 1rem;
+  
+   .comment-card {
+    display: flex;
+    margin: 2.5rem 0;
+    & > .comment-image {
+      img {
+        @include circle(50px);
+      }
+    }
+    & > .comment-body {
+      width: 100%;
+      margin: 0 1rem;
+      & > .userdate {
+        display: flex;
+        justify-content: space-between;
+
+        & > .user {
+          color: $style-white;
+          margin: 0;
+        }
+        & > .date {
+          color: $style-white;
+          margin: 0;
+          font-size: smaller;
+        }
+      }
+
+      & > .comment {
+        color: $sub-text;
+        margin-bottom: 0.25rem;
+      }
+
+      & > .comment-events {
+        & > .like {
+          color: $style-white;
+          font-weight: 700;
+          &:hover {
+            color: $style-special-hover;
+          }
+        }
+        & > .share {
+          color: $sub-text;
+          margin: 0 1rem;
+
+          i {
+            transform: rotateY(180deg);
+          }
+
+          &:hover {
+            color: $style-special-hover !important;
+          }
+        }
+
+        &:hover {
+          & > .share {
+            color: $style-white;
+          }
+        }
+      }    
+    }
+  }
+
+  
+}
