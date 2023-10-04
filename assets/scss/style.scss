@@ -1,6 +1,7 @@
 @import "color";
 @import "reset";
 @import "mixin";
+@import "account-list";
 
 header {
   .hdf-header {
@@ -28,36 +29,6 @@ header {
             color: $style-white;
             font-weight: 600;
             margin: 0 0.5rem;
-          }
-        }
-      }
-      .account {
-        display: flex;
-        align-items: center;
-
-        & > .account-list {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          margin: 0;
-
-          & > .account-item {
-            margin: 0 0.5rem;
-
-            & > .account-link {
-              display: inline-block;
-              color: $style-white;
-              width: max-content;
-            }
-
-            & > .lock {
-              background-color: $style-special;
-              padding: 0.5rem 0.75rem;
-
-              &:hover {
-                background-color: $style-special-dark;
-              }
-            }
           }
         }
       }
@@ -194,7 +165,6 @@ main {
           opacity: 0.8;
           height: 250px;
           width: 175px;
-          
         }
 
         .details {
@@ -265,7 +235,6 @@ main {
         }
       }
 
-    
       .announce {
         background-color: $announce;
         color: $style-white;
@@ -513,6 +482,19 @@ main {
               }
             }
           }
+        }
+      }
+
+      .registration-alert {
+        display: flex;
+        background-color: $announce;
+        justify-content: space-between;
+        padding: 1.5rem 1rem;
+        border: 1px solid #dc3545;
+        border-radius: 0.5rem;
+
+        & > .reg-text {
+          color: $style-white;
         }
       }
     }
