@@ -453,6 +453,7 @@ main {
       .movie-details {
         background-color: $back-shadow;
         padding: 1rem;
+        margin: 0;
         .movie-data {
           display: flex;
           flex-direction: column;
@@ -501,6 +502,10 @@ main {
                   width: 30px;
                   height: 30px;
                   border-radius: 50%;
+                }
+
+                &:hover{
+                  color: $style-special;
                 }
               }
             }

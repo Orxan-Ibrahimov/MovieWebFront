@@ -423,6 +423,7 @@ main > .container > .row .pagination-list > .active > .pagination-link {
 main > .container > .row .movie-details {
   background-color: #212529;
   padding: 1rem;
+  margin: 0;
 }
 main > .container > .row .movie-details .movie-data {
   display: flex;
@@ -466,6 +467,9 @@ main > .container > .row .movie-details .movie-data > .movie-table > .movie-row 
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+main > .container > .row .movie-details .movie-data > .movie-table > .movie-row .movie-pill:hover {
+  color: #dc3545;
 }
 
 footer .about-us {
