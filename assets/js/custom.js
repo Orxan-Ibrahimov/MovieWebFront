@@ -21,4 +21,12 @@ $(document).ready(function(){
     $('footer .about-us').removeClass('makeBlur');
     $('.read-btn').remove();
  });  
+
+ $('.spoiler-box').click(function (e) { 
+    e.preventDefault();
+    $(this).remove();
+    $(this).parent(".spoiler").removeClass("spoiler");
+    var x = $(this).parent;
+    console.log($(this).parents());
+ });
   });

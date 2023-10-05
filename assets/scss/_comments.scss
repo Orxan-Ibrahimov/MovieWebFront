@@ -1,10 +1,10 @@
-.comments {
-  background-color: $back-shadow;
+.comments-box {
   padding: 1rem;
-  
-   .comment-card {
+
+  .comment-card {
     display: flex;
     margin: 2.5rem 0;
+    position: relative;
     & > .comment-image {
       img {
         @include circle(50px);
@@ -28,40 +28,98 @@
         }
       }
 
-      & > .comment {
-        color: $sub-text;
-        margin-bottom: 0.25rem;
-      }
-
-      & > .comment-events {
-        & > .like {
-          color: $style-white;
-          font-weight: 700;
-          &:hover {
-            color: $style-special-hover;
-          }
-        }
-        & > .share {
+      & > .commentAndEvents {
+        & > .comment {
           color: $sub-text;
-          margin: 0 1rem;
+          margin-bottom: 0.25rem;
+        }
 
-          i {
-            transform: rotateY(180deg);
+        &:not(.spoiler) > .comment-events {
+          & > .like {
+            color: $style-white;
+            font-weight: 700;
+            &:hover {
+              color: $style-special-hover;
+            }
+
+            &.liked {
+              color: $style-special;
+            }
+          }
+          & > .share {
+            color: $sub-text;
+            margin: 0 1rem;
+
+            i {
+              transform: rotateY(180deg);
+            }
+
+            &:hover {
+              color: $style-special-hover !important;
+            }
           }
 
           &:hover {
-            color: $style-special-hover !important;
+            & > .share {
+              color: $style-white;
+            }
           }
         }
 
-        &:hover {
-          & > .share {
+        &.spoiler {
+          filter: blur(7px);
+          
+          *{
+            cursor: default;
+          }
+
+          .like {
             color: $style-white;
+            font-weight: 700;
+            
+            &.liked {
+              color: $style-special;
+            }
+          }
+          .share {
+            color: $sub-text;
+            margin: 0 1rem;
+           
+
+            i {
+              transform: rotateY(180deg);
+            }
           }
         }
-      }    
+      }
+    }
+
+    & > .spoiler-box {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem;
+      background-color: $announce;
+      border: 1px solid $style-special;
+      opacity: 0.4;
+
+      & > a {
+        display: block;
+        color: $style-white;
+        padding: 1rem;
+      }
+    }
+
+    &::before {
+      content: "";
+      background: transparent;
+      background-size: cover;
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      z-index: -1;
+      filter: blur(5px);
     }
   }
-
-  
 }
