@@ -1,0 +1,44 @@
+.commentary {
+    padding: 1rem;
+    background-color: #272c31;
+  & > .commentary-header {
+    
+    display: flex;
+    align-items: center;
+
+    & > .commentary-user {
+      @include circle(40px);
+    }
+
+    & > .form-control {
+      &:focus {
+        color: $back-shadow;
+        border: none;
+        box-shadow: none;
+      }
+    }
+    & > .commentary-send {
+      padding: 0.5rem 1rem;
+      background-color: $style-special;
+      color: $style-white;
+      border-radius: 1rem;
+    }
+  }
+  &>.commentary-body{
+    margin: .5rem 0;
+    & >.form-check{
+
+       &>.form-check-input{
+        color: $style-white;        
+        &:focus{
+            border: none;
+            box-shadow: none;
+        }
+       }
+
+       &>.form-check-label{
+        color: $style-white;
+       }
+    }
+  }
+}

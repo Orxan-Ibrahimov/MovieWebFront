@@ -66,6 +66,49 @@ ol {
   background-color: #bb2d3b;
 }
 
+.commentary {
+  padding: 1rem;
+  background-color: #272c31;
+}
+.commentary > .commentary-header {
+  display: flex;
+  align-items: center;
+}
+.commentary > .commentary-header > .commentary-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: none;
+  border-radius: 50%;
+  color: none;
+}
+.commentary > .commentary-header > .form-control:focus {
+  color: #212529;
+  border: none;
+  box-shadow: none;
+}
+.commentary > .commentary-header > .commentary-send {
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 1rem;
+}
+.commentary > .commentary-body {
+  margin: 0.5rem 0;
+}
+.commentary > .commentary-body > .form-check > .form-check-input {
+  color: #fff;
+}
+.commentary > .commentary-body > .form-check > .form-check-input:focus {
+  border: none;
+  box-shadow: none;
+}
+.commentary > .commentary-body > .form-check > .form-check-label {
+  color: #fff;
+}
+
 .comments-box {
   padding: 1rem;
 }
