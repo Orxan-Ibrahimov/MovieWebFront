@@ -1,8 +1,7 @@
 .commentary {
-    padding: 1rem;
-    background-color: #272c31;
+  padding: 1rem;
+  background-color: #272c31;
   & > .commentary-header {
-    
     display: flex;
     align-items: center;
 
@@ -22,23 +21,47 @@
       background-color: $style-special;
       color: $style-white;
       border-radius: 1rem;
+      pointer-events: none;
+      opacity: .8;
+
     }
   }
-  &>.commentary-body{
-    margin: .5rem 0;
-    & >.form-check{
-
-       &>.form-check-input{
-        color: $style-white;        
-        &:focus{
-            border: none;
-            box-shadow: none;
-        }
-       }
-
-       &>.form-check-label{
+  & > .commentary-body {
+    margin: 0.5rem 0;
+    & > .form-check {
+      & > .form-check-input {
         color: $style-white;
-       }
+
+        &:focus {
+          border: none;
+          box-shadow: none;
+        }
+
+        // &:checked{
+        //   background-color: green;
+        // }
+      }
+
+      & > .form-check-label {
+        color: $style-white;
+      }
+    }
+  }
+
+  & > .commentary-footer {
+    & > .checkRobot {
+      display: inline-block;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+    & > .isRobot {      
+      color: #fff;
+      background-color: #f00;
+    }
+
+    & > .isNotRobot {
+      color: #000;
+      background-color: #0f0;
     }
   }
 }

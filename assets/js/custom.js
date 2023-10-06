@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  let IsSended = false;
+
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
@@ -29,7 +31,6 @@ $(document).ready(function () {
       .find(".comment-body")
       .each(function (indexInArray, valueOfElement) {
         $(valueOfElement).children(".spoiler").removeClass("spoiler");
-        console.log($(valueOfElement).children(".spoiler"));
       });
 
     $(this).remove();
@@ -37,79 +38,236 @@ $(document).ready(function () {
 
   $(".share").click(function (e) {
     e.preventDefault();
-    let commentary = CreateCommentary();
-    $(this).parent().append(commentary);
+    IsSended = Share(this, IsSended);
   });
+
+  $(".commentary-send").click(function (e) {
+    e.preventDefault();
+   let comment = Send(this);
+    $(".comments-box").prepend(comment);
+  });
+
+  $(".checkRobot").click(function (e) {
+    e.preventDefault();
+    let send = $(this).parent().prev().prev().children(".commentary-send")[0];
+    console.log(send);
+
+    if (this.classList.contains("isRobot")) {
+      this.classList.replace("isRobot", "isNotRobot");
+      $(send).css({ "pointer-events": "fill", opacity: "1" });
+      this.textContent = "Ben robot değilim";
+    } else {
+      this.classList.replace("isNotRobot", "isRobot");
+      $(send).css({ "pointer-events": "none", opacity: ".8" });
+      this.textContent = "Ben robotum";
+    }
+  });
+
+  function Send(element) {
+    let text = $(element).prev().val();
+    $(this).prev().val("");
+    if (!text) {
+      alert("Yorumu doldurmak zorunludur");
+      return;
+    }    
+    return CreateComment(text);
+    
+  }
+  function CreateCommentary() {
+    let commentary = document.createElement("form");
+    commentary.classList.add("commentary");
+
+    let commentaryHeader = document.createElement("div");
+    commentaryHeader.classList.add("commentary-header");
+    commentary.append(commentaryHeader);
+
+    let commentaryUserImage = document.createElement("img");
+    commentaryUserImage.classList.add("commentary-user");
+    commentaryUserImage.setAttribute("src", "assets/images/avatars/avatar.png");
+    commentaryUserImage.setAttribute("alt", "user");
+    commentaryHeader.append(commentaryUserImage);
+
+    let comment = document.createElement("input");
+    comment.classList.add("form-control", "mx-3");
+    comment.setAttribute("type", "text");
+    comment.setAttribute("placeholder", "Düşüncelerini paylaş...");
+    commentaryHeader.append(comment);
+
+    let sendBtn = document.createElement("a");
+    sendBtn.classList.add("commentary-send");
+    sendBtn.textContent = "Gönder";
+    sendBtn.setAttribute("href", "#");
+    $(sendBtn).click(function (e) {
+      e.preventDefault();
+     let content = Send(this);    
+      let position = $(this).parent()[0];
+
+      while (!(position.classList.contains("commentAndEvents"))) 
+      position = $(position).parent()[0];
+
+      $(position).after(content);
+
+    });
+    commentaryHeader.append(sendBtn);
+
+    //commentary-body
+    let commentaryBody = document.createElement("div");
+    commentaryBody.classList.add("commentary-body");
+    commentary.append(commentaryBody);
+
+    let formCheck = document.createElement("div");
+    formCheck.classList.add("form-check");
+    formCheck.classList.add("form-switch");
+    commentaryBody.append(formCheck);
+
+    let formCheckInput = document.createElement("input");
+    formCheckInput.classList.add("form-check-input");
+    formCheckInput.setAttribute("type", "checkbox");
+    formCheckInput.setAttribute("role", "switch");
+    formCheckInput.setAttribute("id", "flexSwitchCheckDefault");
+    $(formCheckInput).click(function (e) {
+      let send = $(this)
+        .parent()
+        .parent()
+        .prev()
+        .children(".commentary-send")[0];
+      if ($(this).is(":checked"))
+        $(send).css({ "pointer-events": "none", opacity: ".8" });
+      else $(send).css({ "pointer-events": "fill", opacity: "1" });
+    });
+    formCheck.append(formCheckInput);
+
+    let formCheckLabel = document.createElement("label");
+    formCheckLabel.classList.add("form-check-label");
+    formCheckLabel.setAttribute("for", "flexSwitchCheckDefault");
+    formCheckLabel.textContent =
+      "Spoiler? (Bir sahne ile ilgili bilgi verecekseniz lütfen işaretleyiniz.)";
+    formCheck.append(formCheckLabel);
+
+    //commentary-footer
+    let commentaryFooter = document.createElement("div");
+    commentaryFooter.classList.add("commentary-footer");
+    commentary.append(commentaryFooter);
+
+    let checkRobot = document.createElement("a");
+    checkRobot.classList.add("checkRobot", "isRobot");
+    checkRobot.setAttribute("href", "#");
+    checkRobot.textContent = "Ben robotum";
+    $(checkRobot).click(function (e) {
+      e.preventDefault();
+      let send = $(this).parent().prev().prev().children(".commentary-send")[0];
+      console.log(send);
+
+      if (this.classList.contains("isRobot")) {
+        this.classList.replace("isRobot", "isNotRobot");
+        $(send).css({ "pointer-events": "fill", opacity: "1" });
+        this.textContent = "Ben robot değilim";
+      } else {
+        this.classList.replace("isNotRobot", "isRobot");
+        $(send).css({ "pointer-events": "none", opacity: ".8" });
+        this.textContent = "Ben robotum";
+      }
+    });
+    commentaryFooter.append(checkRobot);
+
+    return commentary;
+  }
+
+  function Share(element, check) {
+    if (!check) check = true;
+    else {
+      $(element).parent().children(".commentary").remove();
+      check = false;
+      return;
+    }
+
+    let commentary = CreateCommentary();
+    console.log($(element).parent().parent());
+    $(element).parent().before(commentary);
+
+    return check;
+  }
+
+  // function Send(element) {
+  //   let text = $(element).prev().val();
+  //   if (!text) {
+  //     alert("Yorumu doldurmak zorunludur");
+  //     console.log(element);
+  //     return;
+  //   }
+  //   var comment = CreateComment(text);
+  //   $(element).prev().val("")
+  //   $(".comments-box").prepend(comment);
+  // }
+  function CreateComment(content) {
+    let commentCard = document.createElement("div");
+    commentCard.classList.add("comment-card");
+
+    let commentImage = document.createElement("div");
+    commentImage.classList.add("comment-image");
+    commentCard.append(commentImage);
+
+    let userImage = document.createElement("img");
+    userImage.setAttribute("src", "assets/images/avatars/avatar.png");
+    userImage.setAttribute("alt", "user");
+    commentImage.append(userImage);
+
+    let commentBody = document.createElement("div");
+    commentBody.classList.add("comment-body");
+    commentCard.append(commentBody);
+
+    let userDate = document.createElement("div");
+    userDate.classList.add("userdate");
+    commentBody.append(userDate);
+
+    let user = document.createElement("p");
+    user.classList.add("user");
+    user.textContent = "Orxan";
+    userDate.append(user);
+
+    let date = document.createElement("p");
+    date.classList.add("date");
+    date.textContent = "Now";
+    userDate.append(date);
+
+    let commentAndEvents = document.createElement("div");
+    commentAndEvents.classList.add("commentAndEvents");
+    commentBody.append(commentAndEvents);
+
+    let comment = document.createElement("p");
+    comment.classList.add("comment");
+    comment.textContent = content;
+    commentAndEvents.append(comment);
+
+    let commentEvents = document.createElement("div");
+    commentEvents.classList.add("comment-events");
+    commentAndEvents.append(commentEvents);
+
+    let like = document.createElement("a");
+    like.classList.add("like");
+    like.setAttribute("href", "#");
+    like.textContent = 0;
+
+    commentEvents.append(like);
+
+    let likeIcon = document.createElement("i");
+    likeIcon.classList.add("fa-solid", "mx-1", "fa-fire-flame-curved");
+    like.prepend(likeIcon);
+
+    let share = document.createElement("a");
+    share.classList.add("share");
+    share.setAttribute("href", "#");
+    share.textContent = "Cevapla";
+    $(share).click(function (e) {
+      e.preventDefault();
+      IsSended = Share(this, IsSended);
+    });
+    commentEvents.append(share);
+
+    let shareIcon = document.createElement("i");
+    shareIcon.classList.add("fa-solid", "mx-1", "fa-share");
+    share.prepend(shareIcon);
+
+    return commentCard;
+  }
 });
-
-function CreateCommentary() {
-  let commentary = document.createElement("form");
-  commentary.classList.add("commentary");
-
-  let commentaryHeader = document.createElement("div");
-  commentaryHeader.classList.add("commentary-header");
-  commentary.append(commentaryHeader);
-
-  let commentaryUserImage = document.createElement("img");
-  commentaryUserImage.classList.add("commentary-user");
-  commentaryUserImage.setAttribute("src", "assets/images/avatars/avatar.png");
-  commentaryUserImage.setAttribute("alt", "user");
-  commentaryHeader.append(commentaryUserImage);
-
-  let comment = document.createElement("input");
-  comment.classList.add("form-control", "mx-3");
-  comment.setAttribute("type", "text");
-  comment.setAttribute("placeholder", "Düşüncelerini paylaş...");
-  commentaryHeader.append(comment);
-
-  let sendBtn = document.createElement("a");
-  sendBtn.classList.add("commentary-send");
-  sendBtn.textContent = "Gönder";
-  sendBtn.setAttribute("href", "#");
-  commentaryHeader.append(sendBtn);
-
-  //commentary-body
-  let commentaryBody = document.createElement("div");
-  commentaryBody.classList.add("commentary-body");
-  commentary.append(commentaryBody);
-
-  let formCheck = document.createElement("div");
-  formCheck.classList.add("form-check");
-  formCheck.classList.add("form-switch");
-  commentaryBody.append(formCheck);
-
-  let formCheckInput = document.createElement("input");
-  formCheckInput.classList.add("form-check-input");
-  formCheckInput.setAttribute("type", "checkbox");
-  formCheckInput.setAttribute("role", "switch");
-  formCheckInput.setAttribute("id", "flexSwitchCheckDefault");
-  formCheck.append(formCheckInput);
-
-  let formCheckLabel = document.createElement("label");
-  formCheckLabel.classList.add("form-check-label");
-  formCheckLabel.setAttribute("for", "flexSwitchCheckDefault");
-  formCheckLabel.textContent = "Spoiler? (Bir sahne ile ilgili bilgi verecekseniz lütfen işaretleyiniz.)";
-  formCheck.append(formCheckLabel);
-
-  //commentary-footer
-  let commentaryFooter = document.createElement("div");
-  commentaryFooter.classList.add("commentary-footer");
-  commentary.append(commentaryFooter);
-
-  let checkRobot = document.createElement("input");
-  checkRobot.classList.add("btn-check");
-  checkRobot.setAttribute("type", "checkbox");
-  checkRobot.setAttribute("autocomplete", "off");
-  checkRobot.setAttribute("id", "btn-check-2-outlined");
-  commentaryFooter.append(checkRobot);
-
-  let checkRobotLabel = document.createElement("label");
-  checkRobotLabel.classList.add("btn", "btn-outline-warning");
-  checkRobotLabel.setAttribute("for", "btn-check-2-outlined");
-  checkRobotLabel.textContent = "Ben robot değilim";
-  commentaryFooter.append(checkRobotLabel);
-
-  let br = document.createElement("br");
-  commentaryFooter.append(br);
-  return commentary;
-}

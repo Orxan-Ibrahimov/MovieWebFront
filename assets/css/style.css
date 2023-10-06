@@ -94,6 +94,8 @@ ol {
   background-color: #dc3545;
   color: #fff;
   border-radius: 1rem;
+  pointer-events: none;
+  opacity: 0.8;
 }
 .commentary > .commentary-body {
   margin: 0.5rem 0;
@@ -107,6 +109,19 @@ ol {
 }
 .commentary > .commentary-body > .form-check > .form-check-label {
   color: #fff;
+}
+.commentary > .commentary-footer > .checkRobot {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.commentary > .commentary-footer > .isRobot {
+  color: #fff;
+  background-color: #f00;
+}
+.commentary > .commentary-footer > .isNotRobot {
+  color: #000;
+  background-color: #0f0;
 }
 
 .comments-box {
