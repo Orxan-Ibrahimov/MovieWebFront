@@ -43,14 +43,13 @@ $(document).ready(function () {
 
   $(".commentary-send").click(function (e) {
     e.preventDefault();
-   let comment = Send(this);
+    let comment = Send(this);
     $(".comments-box").prepend(comment);
   });
 
   $(".checkRobot").click(function (e) {
     e.preventDefault();
     let send = $(this).parent().prev().prev().children(".commentary-send")[0];
-    console.log(send);
 
     if (this.classList.contains("isRobot")) {
       this.classList.replace("isRobot", "isNotRobot");
@@ -69,10 +68,10 @@ $(document).ready(function () {
     if (!text) {
       alert("Yorumu doldurmak zorunludur");
       return;
-    }    
+    }
     return CreateComment(text);
-    
   }
+
   function CreateCommentary() {
     let commentary = document.createElement("form");
     commentary.classList.add("commentary");
@@ -99,14 +98,13 @@ $(document).ready(function () {
     sendBtn.setAttribute("href", "#");
     $(sendBtn).click(function (e) {
       e.preventDefault();
-     let content = Send(this);    
+      let content = Send(this);
       let position = $(this).parent()[0];
 
-      while (!(position.classList.contains("commentAndEvents"))) 
-      position = $(position).parent()[0];
+      while (!position.classList.contains("commentAndEvents"))
+        position = $(position).parent()[0];
 
       $(position).after(content);
-
     });
     commentaryHeader.append(sendBtn);
 
@@ -156,7 +154,6 @@ $(document).ready(function () {
     $(checkRobot).click(function (e) {
       e.preventDefault();
       let send = $(this).parent().prev().prev().children(".commentary-send")[0];
-      console.log(send);
 
       if (this.classList.contains("isRobot")) {
         this.classList.replace("isRobot", "isNotRobot");
@@ -176,29 +173,20 @@ $(document).ready(function () {
   function Share(element, check) {
     if (!check) check = true;
     else {
-      $(element).parent().children(".commentary").remove();
+      let position = $(element).parent()[0];
+
+      while (!position.classList.contains("commentAndEvents"))
+        position = $(position).parent()[0];
+
+      position = $(position).children(".commentary").remove();
       check = false;
       return;
     }
-
     let commentary = CreateCommentary();
-    console.log($(element).parent().parent());
     $(element).parent().before(commentary);
-
     return check;
   }
 
-  // function Send(element) {
-  //   let text = $(element).prev().val();
-  //   if (!text) {
-  //     alert("Yorumu doldurmak zorunludur");
-  //     console.log(element);
-  //     return;
-  //   }
-  //   var comment = CreateComment(text);
-  //   $(element).prev().val("")
-  //   $(".comments-box").prepend(comment);
-  // }
   function CreateComment(content) {
     let commentCard = document.createElement("div");
     commentCard.classList.add("comment-card");
