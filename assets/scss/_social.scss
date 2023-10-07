@@ -1,0 +1,22 @@
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  
+  & > .social-item {
+    margin: 0 0.4rem;
+    & > .social-link {
+      display: block;
+      color: $style-white;
+      background-color: $movie-order;
+      padding: 0.5rem 0.7rem;
+      border-radius: 10px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $movie-order-hover;
+      }
+    }
+  }
+}

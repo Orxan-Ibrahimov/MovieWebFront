@@ -1,6 +1,8 @@
 @import "color";
 @import "reset";
 @import "mixin";
+@import "rating";
+@import "social";
 @import "account-list";
 @import "commentary";
 @import "comments";
@@ -289,6 +291,13 @@ main {
           &:hover {
             background-color: $movie-order;
             color: $style-white;
+          }
+        }
+        & > .movie-look{
+          background-color: $back-shadow;
+
+          &:hover{
+            background-color: $back-shadow-hover;
           }
         }
       }

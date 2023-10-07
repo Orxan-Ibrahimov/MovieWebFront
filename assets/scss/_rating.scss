@@ -1,0 +1,50 @@
+.movie-rating {
+  display: flex;
+  & > .rating-icon {
+    color: $style-special;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  & > .rating {
+    color: $style-white;
+    margin: 0 1rem;
+
+    & > .current-rating {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $style-white;
+      margin-bottom: 0;
+
+      & > .maximum {
+        color: $sub-text;
+      }
+    }
+    & > .votes {
+      color: $sub-text;
+      font-size: small;
+      font-weight: 500;
+    }
+  }
+}
+
+.rate-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 0;
+  & > .rate-item {
+    margin: 0 0.2rem;
+    & > input {
+      display: none;
+    }
+    & > .rate {
+      color: $new-movie;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $style-special;
+      }
+    }
+  }
+}

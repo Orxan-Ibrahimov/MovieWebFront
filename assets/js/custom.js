@@ -64,7 +64,7 @@ $(document).ready(function () {
 
   function Send(element) {
     let text = $(element).prev().val();
-    $(this).prev().val("");
+    $(element).prev().val("");
     if (!text) {
       alert("Yorumu doldurmak zorunludur");
       return;
@@ -122,17 +122,7 @@ $(document).ready(function () {
     formCheckInput.classList.add("form-check-input");
     formCheckInput.setAttribute("type", "checkbox");
     formCheckInput.setAttribute("role", "switch");
-    formCheckInput.setAttribute("id", "flexSwitchCheckDefault");
-    $(formCheckInput).click(function (e) {
-      let send = $(this)
-        .parent()
-        .parent()
-        .prev()
-        .children(".commentary-send")[0];
-      if ($(this).is(":checked"))
-        $(send).css({ "pointer-events": "none", opacity: ".8" });
-      else $(send).css({ "pointer-events": "fill", opacity: "1" });
-    });
+    formCheckInput.setAttribute("id", "flexSwitchCheckDefault");   
     formCheck.append(formCheckInput);
 
     let formCheckLabel = document.createElement("label");

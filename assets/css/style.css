@@ -30,6 +30,75 @@ ol {
   background-color: #212529;
 }
 
+.movie-rating {
+  display: flex;
+}
+.movie-rating > .rating-icon {
+  color: #dc3545;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.movie-rating > .rating {
+  color: #fff;
+  margin: 0 1rem;
+}
+.movie-rating > .rating > .current-rating {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0;
+}
+.movie-rating > .rating > .current-rating > .maximum {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.movie-rating > .rating > .votes {
+  color: rgba(255, 255, 255, 0.5019607843);
+  font-size: small;
+  font-weight: 500;
+}
+
+.rate-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.rate-list > .rate-item {
+  margin: 0 0.2rem;
+}
+.rate-list > .rate-item > input {
+  display: none;
+}
+.rate-list > .rate-item > .rate {
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.rate-list > .rate-item > .rate:hover {
+  color: #dc3545;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.social-list > .social-item {
+  margin: 0 0.4rem;
+}
+.social-list > .social-item > .social-link {
+  display: block;
+  color: #fff;
+  background-color: #6c757d;
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.social-list > .social-item > .social-link:hover {
+  background-color: #5c636a;
+}
+
 .account {
   display: flex;
   align-items: center;
@@ -220,16 +289,6 @@ ol {
   display: block;
   color: #fff;
   padding: 1rem;
-}
-.comments-box .comment-card::before {
-  content: "";
-  background: transparent;
-  background-size: cover;
-  width: 100%;
-  height: 500px;
-  position: absolute;
-  z-index: -1;
-  filter: blur(5px);
 }
 
 header .hdf-header {
@@ -489,6 +548,12 @@ main > .container > .row .movie-categorize > .movie-order {
 main > .container > .row .movie-categorize > .movie-order:hover {
   background-color: #6c757d;
   color: #fff;
+}
+main > .container > .row .movie-categorize > .movie-look {
+  background-color: #212529;
+}
+main > .container > .row .movie-categorize > .movie-look:hover {
+  background-color: #1c1f23;
 }
 main > .container > .row #newMovie {
   background-color: #212529;
