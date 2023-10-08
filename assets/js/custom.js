@@ -62,6 +62,29 @@ $(document).ready(function () {
     }
   });
 
+  $(".rate-item .rate").click(function (e) {
+    Vote(this);
+  });
+
+  $(".rate-list").mouseleave(function () {
+    let activeIndex = -1;
+    votes = $(this).children();
+    $(votes).each(function (index, element) {
+      element = $(element).children(".rate");
+
+      if ($(element)[0].classList.contains("active")) {
+        activeIndex = $(element).parent().index();
+      }
+      if (activeIndex == -1) $(element).css({ color: "rgba(255,255,255,.1)" });
+      else if (activeIndex <= index)
+        $(element).css({ color: "rgba(255,255,255,.1)" });
+    });
+  });
+
+  $(".rate-item .rate").mouseenter(function () { 
+    VoteHover(this);
+  });
+  
   function Send(element) {
     let text = $(element).prev().val();
     $(element).prev().val("");
@@ -122,7 +145,7 @@ $(document).ready(function () {
     formCheckInput.classList.add("form-check-input");
     formCheckInput.setAttribute("type", "checkbox");
     formCheckInput.setAttribute("role", "switch");
-    formCheckInput.setAttribute("id", "flexSwitchCheckDefault");   
+    formCheckInput.setAttribute("id", "flexSwitchCheckDefault");
     formCheck.append(formCheckInput);
 
     let formCheckLabel = document.createElement("label");
@@ -247,5 +270,29 @@ $(document).ready(function () {
     share.prepend(shareIcon);
 
     return commentCard;
+  }
+
+  function VoteHover(currentElement) {
+    let activeIndex = -1;
+    let currentIndex = $(currentElement).parent().index();   
+    let votes = $(currentElement).parent().parent().children();
+    $(votes).each(function (index, element) {
+      element = $(element).children(".rate");
+      if ($(element)[0].classList.contains("active")) {
+        activeIndex = $(element).index();
+      }
+      if (index <= currentIndex) $(element).css({ color: "#dc3545" });
+      else $(element).css({ color: "rgba(255,255,255,.1)" });
+    });
+  }
+
+  function Vote(currentElement) {
+    let currentIndex = $(currentElement).parent().index();
+    let votes = $(currentElement).parent().parent().children();
+    $(votes).each(function (index, element) {
+      element = $(element).children(".rate");
+      $(element)[0].classList.remove("active");
+      if (index <= currentIndex) $(element)[0].classList.add("active");
+    });
   }
 });

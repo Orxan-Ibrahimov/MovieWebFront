@@ -29,22 +29,24 @@
 
 .rate-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: .5rem 0;
+  margin: 0 2rem 0 1rem;
   & > .rate-item {
     margin: 0 0.2rem;
+
     & > input {
       display: none;
     }
     & > .rate {
       color: $new-movie;
       font-size: 1.5rem;
-      cursor: pointer;
+      cursor: pointer;     
+    }
 
-      &:hover {
-        color: $style-special;
-      }
+    & > .active {
+      color: $style-special !important;   
     }
   }
 }
