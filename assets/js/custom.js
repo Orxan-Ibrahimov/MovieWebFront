@@ -1,5 +1,11 @@
 $(document).ready(function () {
   let IsSended = false;
+  let visible = false;
+  
+  $(".short-hdf-menu .menu-bar").click(function (e) {
+    e.preventDefault();
+    $(".hdf-short-menu").slideToggle();    
+  });
 
   $(".owl-carousel").owlCarousel({
     loop: true,
@@ -81,10 +87,10 @@ $(document).ready(function () {
     });
   });
 
-  $(".rate-item .rate").mouseenter(function () { 
+  $(".rate-item .rate").mouseenter(function () {
     VoteHover(this);
   });
-  
+
   function Send(element) {
     let text = $(element).prev().val();
     $(element).prev().val("");
@@ -274,7 +280,7 @@ $(document).ready(function () {
 
   function VoteHover(currentElement) {
     let activeIndex = -1;
-    let currentIndex = $(currentElement).parent().index();   
+    let currentIndex = $(currentElement).parent().index();
     let votes = $(currentElement).parent().parent().children();
     $(votes).each(function (index, element) {
       element = $(element).children(".rate");

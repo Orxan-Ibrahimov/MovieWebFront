@@ -1,43 +1,54 @@
 .account {
+  display: flex;
+  align-items: center;
+
+  & > .account-list {
+    width: 100%;
     display: flex;
     align-items: center;
+    margin: 0;
 
-    & > .account-list {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      margin: 0;
+    & > .account-item {
+      margin: 0 0.5rem;
 
-      & > .account-item {
-        margin: 0 0.5rem;
+      & > .account-link {
+        display: inline-block;
+        color: $style-white;
+        width: max-content;
+        padding: 0.5rem 0.75rem;
+      }
 
-        & > .account-link {
-          display: inline-block;
-          color: $style-white;
-          width: max-content;
-          padding: 0.5rem 0.75rem;
+      & > .account-user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $style-white;
+        
+
+        & > img {
+          @include circle(40px);
         }
+      }
 
-        & > .account-link.account-white{
-            background-color: $style-white;
-            color: $announce-icon;
-            padding: 0.25rem 0.5rem;
+      & > .account-link.account-white {
+        background-color: $style-white;
+        color: $announce-icon;
+        padding: 0.25rem 0.5rem;
 
-            &:hover{
-                background-color: $style-white;
-            color: $announce-icon;
-            padding: 0.25rem 0.5rem;
-            }
+        &:hover {
+          background-color: $style-white;
+          color: $announce-icon;
+          padding: 0.25rem 0.5rem;
         }
+      }
 
-        & > .lock {
-          background-color: $style-special;
-         
+      & > .lock {
+        background-color: $style-special;
 
-          &:hover {
-            background-color: $style-special-dark;
-          }
+        &:hover {
+          background-color: $style-special-dark;
         }
       }
     }
   }
+}

@@ -9,6 +9,22 @@
 
 header {
   .hdf-header {
+    .short-hdf-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .menu-bar {
+        color: $sub-text;
+        font-size: xx-large;
+      }
+
+      .filter {
+        color: $sub-text;
+        font-size: xx-large;
+      }
+    }
+
     background-color: $back-shadow;
     .hdf-menu {
       display: flex;
@@ -37,11 +53,47 @@ header {
         }
       }
     }
+
+    .hdf-short-menu {    
+      display: none;  
+      & > .hdf-menu-list {
+       text-align: center;
+       padding: 0;
+       & > .hdf-menu-home {
+          & > .hdf-menu-home-link {
+            @include circle(40px, $style-special, $style-white);
+
+            i {
+              font-size: 1rem;
+            }
+          }
+        }
+        & > .hdf-menu-item {
+          .hdf-menu-item-link {
+            display: block;
+            color: $style-white;
+            font-weight: 600;
+            margin: 1rem 0.5rem;
+          }
+        }
+      }
+
+      & > .account{
+        display: flex;
+        flex-direction: column;
+
+        & > .account-list{
+          display: flex;
+          justify-content: center;
+          padding: 1rem;
+        }
+      }
+    }
   }
 }
 
 main {
-  & > .container {
+  & > .container-lg {
     & > .row {
       background-color: $background;
 
@@ -293,10 +345,10 @@ main {
             color: $style-white;
           }
         }
-        & > .movie-look{
+        & > .movie-look {
           background-color: $back-shadow;
 
-          &:hover{
+          &:hover {
             background-color: $back-shadow-hover;
           }
         }
@@ -408,7 +460,7 @@ main {
         }
       }
 
-      .pagination-list {       
+      .pagination-list {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -563,6 +615,14 @@ footer {
       height: 100%;
       background-color: rgb(38 35 35 / 80%);
       filter: blur(15px);
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    .hdf-heading-title {
+      font-size: smaller;
     }
   }
 }

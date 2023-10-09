@@ -22,14 +22,67 @@
   </head>
   <body>
     <header>
-      <div class="container hdf-header">
+      <div class="container-fluid container-lg hdf-header">
         <div class="row">
-          <div class="col-12 col-lg-3 border border-dark">
-            <a href="#" class="nav-brand">
+          <div class="col-12 col-lg-3 border border-dark short-hdf-menu">
+            <a href="#" class="menu-bar d-lg-none"><i class="fa-solid fa-bars"></i></a>
+            <a href="home.html" class="nav-brand">
               <img src="assets/images/logo-hdf.png" alt="hdf" />
             </a>
+            <a href="#" class="filter d-lg-none"><i class="fa-solid fa-filter"></i></a>
           </div>
           <div class="col-lg-9 hdf-menu d-none d-lg-flex justify-xl-end">
+            <ul class="hdf-menu-list">
+              <li class="hdf-menu-home">
+                <a href="#" class="hdf-menu-home-link">
+                  <i class="fa-solid fa-house"></i>
+                </a>
+              </li>
+              <li class="hdf-menu-item">
+                <a href="#" class="hdf-menu-item-link"> Filmler </a>
+              </li>
+              <li class="hdf-menu-item">
+                <a href="#" class="hdf-menu-item-link"> Diziler </a>
+              </li>
+              <li class="hdf-menu-item">
+                <a href="#" class="hdf-menu-item-link">
+                  Yapim Yili <i class="fa-solid fa-caret-down"></i>
+                </a>
+              </li>
+              <li class="hdf-menu-item">
+                <a href="#" class="hdf-menu-item-link"> Seri Filmler </a>
+              </li>
+            </ul>
+            <div class="account">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Film veya Dizi Ara"
+                />
+              </div>
+              <!-- <ul class="account-list">
+                <li class="account-item">
+                  <a href="#" class="account-link">Kayit Ol</a>
+                </li>
+                <li class="account-item">
+                  <a href="#" class="account-link lock rounded"
+                    ><i class="fa-solid fa-lock"></i> Giris Yap</a
+                  >
+                </li>
+              </ul> -->
+
+              <ul class="account-list signed">
+                <li class="account-item">
+                  <a href="#" class="account-user">
+                    <img src="assets/images/avatars/avatar.png" alt="user" />
+                    <span class="mx-2">Virtual-Man</span> <i class="fa-solid fa-caret-down"></i>
+                  </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 hdf-short-menu">
             <ul class="hdf-menu-list">
               <li class="hdf-menu-home">
                 <a href="#" class="hdf-menu-home-link">
@@ -69,16 +122,24 @@
                   >
                 </li>
               </ul>
+              <ul class="account-list signed">
+                <li class="account-item">
+                  <a href="#" class="account-user">
+                    <img src="assets/images/avatars/avatar.png" alt="user" />
+                    <span class="mx-2">Virtual-Man</span> <i class="fa-solid fa-caret-down"></i>
+                  </a>
+                </li>               
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <div class="container">
+      <div class="container-fluid container-lg">
         <div class="row">
           <section>
-            <div class="container">
+            <div class="container-fluid container-lg">
               <div class="row my-4">
                 <div class="col-12 col-lg-9">                  
                   <div class="row">
@@ -95,14 +156,14 @@
                     </div>
                     <div class="col-12">
                       <div class="row movie-details">
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-lg-4">
                           <img
                             src="assets/images/movies/spider-verse2.jpeg"
                             class="w-100"
                             alt="spider-verse2"
                           />
                         </div>
-                        <div class="col-8">
+                        <div class="col-12 col-md-6 col-lg-8">
                           <div class="movie-data">
                             <p class="movie-text">
                               Çekici bir hırsız ve beklenmedik bir maceracı
@@ -416,7 +477,8 @@
                         </span>
                       </div>
                     </div>
-                    <!-- <div class="col-12">
+
+                    <div class="col-12">
                       <div class="registration-alert my-3">
                         <p class="reg-text">
                           Sadece kayıtlı üyeler yorum yapabilir. Bir kaç saniye
@@ -441,7 +503,7 @@
                           </ul>
                         </div>
                       </div>
-                    </div> -->
+                    </div>
 
                     <div class="col-12">
                       <form action="" class="commentary">
@@ -781,7 +843,7 @@
                   </div>
                 </div>
 
-                <div class="d-none d-lg-block col-3">
+                <div class="d-none d-lg-block col-12 col-lg-3">
                   <div class="row">
                     <div class="col-12">
                       <div class="movie-categorize">
@@ -934,7 +996,7 @@
       </div>
     </main>
     <footer>
-      <div class="container">
+      <div class="container-fluid container-lg">
         <div class="row">
           <div class="col-12 px-0">
             <div class="footer">
