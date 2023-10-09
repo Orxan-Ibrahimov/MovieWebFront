@@ -59,6 +59,10 @@ $(document).ready(function () {
     e.preventDefault();
     let comment = Send(this);
     $(".comments-box").prepend(comment);
+
+    setTimeout(() => {
+       window.location.reload();
+    }, 1000);
   });
 
   $(".checkRobot").click(function (e) {

@@ -48,11 +48,18 @@
           }
           & > .share {
             color: $sub-text;
-            margin: 0 1rem;
 
             i {
               transform: rotateY(180deg);
             }
+
+            &:hover {
+              color: $style-special-hover !important;
+            }
+          }
+
+          & > .remove {
+            color: $sub-text;            
 
             &:hover {
               color: $style-special-hover !important;
@@ -81,14 +88,13 @@
               color: $style-special;
             }
           }
-          .share {
+          .share,.remove {
             color: $sub-text;
-            margin: 0 1rem;
            
 
             i {
               transform: rotateY(180deg);
-            }
+            }           
           }
         }
       }

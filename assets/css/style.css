@@ -269,12 +269,17 @@ body {
 }
 .comments-box .comment-card > .comment-body > .commentAndEvents:not(.spoiler) > .comment-events > .share {
   color: rgba(255, 255, 255, 0.5019607843);
-  margin: 0 1rem;
 }
 .comments-box .comment-card > .comment-body > .commentAndEvents:not(.spoiler) > .comment-events > .share i {
   transform: rotateY(180deg);
 }
 .comments-box .comment-card > .comment-body > .commentAndEvents:not(.spoiler) > .comment-events > .share:hover {
+  color: #ff675b !important;
+}
+.comments-box .comment-card > .comment-body > .commentAndEvents:not(.spoiler) > .comment-events > .remove {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.comments-box .comment-card > .comment-body > .commentAndEvents:not(.spoiler) > .comment-events > .remove:hover {
   color: #ff675b !important;
 }
 .comments-box .comment-card > .comment-body > .commentAndEvents:not(.spoiler) > .comment-events:hover > .share {
@@ -293,11 +298,10 @@ body {
 .comments-box .comment-card > .comment-body > .commentAndEvents.spoiler .like.liked {
   color: #dc3545;
 }
-.comments-box .comment-card > .comment-body > .commentAndEvents.spoiler .share {
+.comments-box .comment-card > .comment-body > .commentAndEvents.spoiler .share, .comments-box .comment-card > .comment-body > .commentAndEvents.spoiler .remove {
   color: rgba(255, 255, 255, 0.5019607843);
-  margin: 0 1rem;
 }
-.comments-box .comment-card > .comment-body > .commentAndEvents.spoiler .share i {
+.comments-box .comment-card > .comment-body > .commentAndEvents.spoiler .share i, .comments-box .comment-card > .comment-body > .commentAndEvents.spoiler .remove i {
   transform: rotateY(180deg);
 }
 .comments-box .comment-card > .spoiler-box {
