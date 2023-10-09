@@ -7,6 +7,14 @@ $(document).ready(function () {
     $(".hdf-short-menu").slideToggle();    
   });
 
+  $(".short-hdf-menu .filter").click(function (e) {
+    e.preventDefault();
+    $(".hdf-menu").toggle();    
+    $("#latest-movies").toggle();    
+    $("#upcoming-movies").toggle();    
+    $("#filter-visible").toggle();    
+  });
+
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,

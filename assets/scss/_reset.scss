@@ -28,3 +28,11 @@ ol {
 .bg-shadow{
   background-color: $back-shadow;
 }
+
+#filter-visible{
+  display: none;
+}
+
+body{
+  background-color: $background;
+}
