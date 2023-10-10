@@ -10,6 +10,7 @@
 
     & > .account-item {
       margin: 0 0.5rem;
+      position: relative;
 
       & > .account-link {
         display: inline-block;
@@ -23,7 +24,6 @@
         align-items: center;
         justify-content: center;
         color: $style-white;
-        
 
         & > img {
           @include circle(40px);
@@ -47,6 +47,42 @@
 
         &:hover {
           background-color: $style-special-dark;
+        }
+      }
+
+      & > .user-actions {
+        position: absolute;
+        left: 0;       
+        width: 100%;
+        display: block;
+        z-index: 2;
+        margin-top: .5rem;
+        background-color: $user-actions;
+        padding: .5rem 0;
+        min-width: 10rem;
+        font-size: .9rem;
+        border-radius: 1px;
+        display: none;
+
+        & > .user-action-item {
+         
+
+          & > .user-action {
+            display: block;
+            color: $user-action-text;
+            padding: .3rem 1rem;
+            text-align: left;
+
+            &:hover{
+              background-color: $new-movie;
+              color: $style-white;
+            }
+          }
+
+          hr{
+            margin: 0;
+            color: $style-white;
+          }
         }
       }
     }

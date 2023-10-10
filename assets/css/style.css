@@ -120,6 +120,7 @@ body {
 }
 .account > .account-list > .account-item {
   margin: 0 0.5rem;
+  position: relative;
 }
 .account > .account-list > .account-item > .account-link {
   display: inline-block;
@@ -158,6 +159,34 @@ body {
 }
 .account > .account-list > .account-item > .lock:hover {
   background-color: #bb2d3b;
+}
+.account > .account-list > .account-item > .user-actions {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  margin-top: 0.5rem;
+  background-color: #343a40;
+  padding: 0.5rem 0;
+  min-width: 10rem;
+  font-size: 0.9rem;
+  border-radius: 1px;
+  display: none;
+}
+.account > .account-list > .account-item > .user-actions > .user-action-item > .user-action {
+  display: block;
+  color: #dee2e6;
+  padding: 0.3rem 1rem;
+  text-align: left;
+}
+.account > .account-list > .account-item > .user-actions > .user-action-item > .user-action:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.account > .account-list > .account-item > .user-actions > .user-action-item hr {
+  margin: 0;
+  color: #fff;
 }
 
 .commentary {
@@ -358,10 +387,45 @@ header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-home > .hdf-menu-home-
 header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-home > .hdf-menu-home-link i {
   font-size: 1rem;
 }
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item {
+  position: relative;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item > .year-list {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  margin-top: 0.5rem;
+  background-color: #343a40;
+  padding: 0.5rem 0;
+  min-width: 10rem;
+  font-size: 0.9rem;
+  border-radius: 1px;
+  display: none;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item > .year-list > .year-item > .year-link {
+  display: block;
+  color: #dee2e6;
+  padding: 0.3rem 1rem;
+  text-align: left;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item > .year-list > .year-item > .year-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item > .year-list > .year-item hr {
+  margin: 0;
+  color: #fff;
+}
 header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item .hdf-menu-item-link {
   color: #fff;
   font-weight: 600;
   margin: 0 0.5rem;
+  padding: 1rem 0;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item:hover .year-list {
+  display: block;
 }
 header .hdf-header .hdf-short-menu {
   display: none;
@@ -383,11 +447,46 @@ header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-home > .hdf-menu
 header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-home > .hdf-menu-home-link i {
   font-size: 1rem;
 }
+header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-item {
+  position: relative;
+}
 header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-item .hdf-menu-item-link {
   display: block;
   color: #fff;
   font-weight: 600;
   margin: 1rem 0.5rem;
+}
+header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-item > .year-list {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  display: block;
+  z-index: 2;
+  margin: 1.5rem 0.5rem;
+  background-color: #343a40;
+  padding: 0.5rem 0;
+  min-width: 10rem;
+  font-size: 0.9rem;
+  border-radius: 1px;
+  display: none;
+}
+header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-item > .year-list > .year-item > .year-link {
+  display: block;
+  color: #dee2e6;
+  padding: 0.3rem 1rem;
+  text-align: left;
+}
+header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-item > .year-list > .year-item > .year-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-item > .year-list > .year-item hr {
+  margin: 0;
+  color: #fff;
+}
+header .hdf-header .hdf-short-menu > .hdf-menu-list > .hdf-menu-item:hover .year-list {
+  display: block;
 }
 header .hdf-header .hdf-short-menu > .account {
   display: flex;
@@ -478,6 +577,11 @@ main .hdf-heading > .hdf-heading-link {
   min-width: max-content;
   border: 1px solid transparent;
   text-transform: capitalize;
+}
+main .hdf-heading > .hdf-heading-link.hdf-heading-active {
+  background-color: #7a2933;
+  border: 1px solid #dc3545;
+  color: #fff;
 }
 main .hdf-heading > .hdf-heading-link:hover {
   border-color: #212529;
@@ -685,11 +789,16 @@ main .newMovieCard > .newMovieCard-body > .newMovieCard-caption > .imdb {
   color: #ffc107;
   font-size: smaller;
 }
-main .newMovieCard:hover {
+main .newMovieCard:not(.newMovieCard-active):hover {
   background: rgba(255, 255, 255, 0.05);
 }
 main .newMovieCard-pill {
   border-radius: 50rem;
+}
+main .newMovieCard-active {
+  background-color: #7a2933;
+  color: #fff;
+  border: 1px solid #dc3545;
 }
 main .movies-for-languages {
   display: flex;

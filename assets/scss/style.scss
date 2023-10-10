@@ -29,7 +29,6 @@ header {
     .hdf-menu {
       display: flex;
       align-items: center;
-      //   justify-content: end;
 
       & > .hdf-menu-list {
         display: flex;
@@ -45,21 +44,62 @@ header {
           }
         }
         & > .hdf-menu-item {
+          position: relative;
+          & > .year-list {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            display: block;
+            z-index: 2;
+            margin-top: 0.5rem;
+            background-color: $user-actions;
+            padding: 0.5rem 0;
+            min-width: 10rem;
+            font-size: 0.9rem;
+            border-radius: 1px;
+            display: none;
+
+            & > .year-item {
+              & > .year-link {
+                display: block;
+                color: $user-action-text;
+                padding: 0.3rem 1rem;
+                text-align: left;
+
+                &:hover {
+                  background-color: $new-movie;
+                  color: $style-white;
+                }
+              }
+
+              hr {
+                margin: 0;
+                color: $style-white;
+              }
+            }
+          }
           .hdf-menu-item-link {
             color: $style-white;
             font-weight: 600;
             margin: 0 0.5rem;
+            padding: 1rem 0;
+          }
+
+          &:hover {
+            .year-list {
+              display: block;
+            }
           }
         }
       }
     }
 
-    .hdf-short-menu {    
-      display: none;  
+    .hdf-short-menu {
+      display: none;
       & > .hdf-menu-list {
-       text-align: center;
-       padding: 0;
-       & > .hdf-menu-home {
+        text-align: center;
+        padding: 0;
+        & > .hdf-menu-home {
           & > .hdf-menu-home-link {
             @include circle(40px, $style-special, $style-white);
 
@@ -69,20 +109,62 @@ header {
           }
         }
         & > .hdf-menu-item {
+          position: relative;
           .hdf-menu-item-link {
             display: block;
             color: $style-white;
             font-weight: 600;
             margin: 1rem 0.5rem;
           }
+
+          & > .year-list {
+            transform: translateX(-50%);
+            position: absolute;
+            left: 50%;
+            top: 0;
+            display: block;
+            z-index: 2;
+            margin: 1.5rem 0.5rem;
+            background-color: $user-actions;
+            padding: 0.5rem 0;
+            min-width: 10rem;
+            font-size: 0.9rem;
+            border-radius: 1px;
+            display: none;
+
+            & > .year-item {
+              & > .year-link {
+                display: block;
+                color: $user-action-text;
+                padding: 0.3rem 1rem;
+                text-align: left;
+
+                &:hover {
+                  background-color: $new-movie;
+                  color: $style-white;
+                }
+              }
+
+              hr {
+                margin: 0;
+                color: $style-white;
+              }
+            }
+          }
+
+          &:hover {
+            .year-list {
+              display: block;
+            }
+          }
         }
       }
 
-      & > .account{
+      & > .account {
         display: flex;
         flex-direction: column;
 
-        & > .account-list{
+        & > .account-list {
           display: flex;
           justify-content: center;
           padding: 1rem;
@@ -167,6 +249,12 @@ main {
       min-width: max-content;
       border: 1px solid transparent;
       text-transform: capitalize;
+
+      &.hdf-heading-active{
+        background-color: $announce;
+        border: 1px solid $style-special;
+        color: $style-white;
+      }
 
       &:hover {
         border-color: $back-shadow;
@@ -416,14 +504,19 @@ main {
         }
       }
     }
-
-    &:hover {
+    &:not(.newMovieCard-active):hover {
       background: $new-movie-hover;
     }
   }
 
   .newMovieCard-pill {
     border-radius: 50rem;
+  }
+
+  .newMovieCard-active{
+    background-color: $announce;
+    color: $style-white;
+    border: 1px solid $style-special;
   }
 
   .movies-for-languages {

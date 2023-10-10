@@ -1,7 +1,11 @@
 $(document).ready(function () {
   let IsSended = false;
   let visible = false;
-  
+
+  $(".user").click(function (e) { 
+    e.preventDefault();
+    $(".user-actions").toggle();   
+  });
   $(".short-hdf-menu .menu-bar").click(function (e) {
     e.preventDefault();
     $(".hdf-short-menu").slideToggle();    
