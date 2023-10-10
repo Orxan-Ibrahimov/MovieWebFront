@@ -9,6 +9,7 @@
 
 header {
   .hdf-header {
+    border-bottom: 3px solid $style-special;
     .short-hdf-menu {
       display: flex;
       justify-content: space-between;
@@ -35,6 +36,7 @@ header {
         align-items: center;
         margin: 0;
         & > .hdf-menu-home {
+          padding-bottom: .5rem;
           & > .hdf-menu-home-link {
             @include circle(40px, $style-special, $style-white);
 
@@ -45,6 +47,8 @@ header {
         }
         & > .hdf-menu-item {
           position: relative;
+          padding-bottom: .5rem;
+          margin: 0 .5rem;
           & > .year-list {
             position: absolute;
             left: 0;
@@ -83,6 +87,10 @@ header {
             font-weight: 600;
             margin: 0 0.5rem;
             padding: 1rem 0;
+          }
+          &.active{
+            
+            border-bottom: 3px solid $style-special;
           }
 
           &:hover {
@@ -221,7 +229,6 @@ main {
     }
   }
   #latest-movies {
-    border-top: 3px solid $style-special;
     padding: 0;
   }
   .hdf-heading {

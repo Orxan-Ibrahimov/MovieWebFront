@@ -350,6 +350,7 @@ body {
 }
 
 header .hdf-header {
+  border-bottom: 3px solid #dc3545;
   background-color: #212529;
 }
 header .hdf-header .short-hdf-menu {
@@ -374,6 +375,9 @@ header .hdf-header .hdf-menu > .hdf-menu-list {
   align-items: center;
   margin: 0;
 }
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-home {
+  padding-bottom: 0.5rem;
+}
 header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-home > .hdf-menu-home-link {
   display: flex;
   justify-content: center;
@@ -389,6 +393,8 @@ header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-home > .hdf-menu-home-
 }
 header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item {
   position: relative;
+  padding-bottom: 0.5rem;
+  margin: 0 0.5rem;
 }
 header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item > .year-list {
   position: absolute;
@@ -423,6 +429,9 @@ header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item .hdf-menu-item-li
   font-weight: 600;
   margin: 0 0.5rem;
   padding: 1rem 0;
+}
+header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item.active {
+  border-bottom: 3px solid #dc3545;
 }
 header .hdf-header .hdf-menu > .hdf-menu-list > .hdf-menu-item:hover .year-list {
   display: block;
@@ -551,7 +560,6 @@ main #upcoming-movies .row .upcoming .upcoming-card:hover .upcoming-link {
   color: #ff675b;
 }
 main #latest-movies {
-  border-top: 3px solid #dc3545;
   padding: 0;
 }
 main .hdf-heading {
