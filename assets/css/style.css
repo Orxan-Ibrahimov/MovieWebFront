@@ -30,6 +30,14 @@ ol {
   background-color: #212529;
 }
 
+.text-rules {
+  color: #00ff99;
+}
+
+.text-inform {
+  color: #ff0000;
+}
+
 #filter-visible {
   display: none;
 }
