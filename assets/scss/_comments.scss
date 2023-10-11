@@ -13,6 +13,16 @@
     & > .comment-body {
       width: 100%;
       margin: 0 1rem;
+
+      & > .comment-movie{
+        font-size: small;
+        color: $sub-text;
+
+        i{
+          font-size: xx-small;
+        }
+      }
+
       & > .userdate {
         display: flex;
         justify-content: space-between;

@@ -269,6 +269,13 @@ body {
   width: 100%;
   margin: 0 1rem;
 }
+.comments-box .comment-card > .comment-body > .comment-movie {
+  font-size: small;
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.comments-box .comment-card > .comment-body > .comment-movie i {
+  font-size: xx-small;
+}
 .comments-box .comment-card > .comment-body > .userdate {
   display: flex;
   justify-content: space-between;
