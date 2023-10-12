@@ -4,6 +4,7 @@ $(document).ready(function () {
 
   $(".user").click(function (e) { 
     e.preventDefault();
+    e.stopPropagation();
     $(".user-actions").toggle();   
   });
   $(".short-hdf-menu .menu-bar").click(function (e) {
@@ -17,6 +18,18 @@ $(document).ready(function () {
     $("#latest-movies").toggle();    
     $("#upcoming-movies").toggle();    
     $("#filter-visible").toggle();    
+  });
+
+  $(document).click(function (e) {
+    e.stopPropagation();
+    $(".robo-menu").hide();         
+    $(".user-actions").hide();   
+  });
+
+  $(".robo-category").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).children(".robo-menu").toggle();         
   });
 
   $(".owl-carousel").owlCarousel({

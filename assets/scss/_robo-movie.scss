@@ -1,0 +1,81 @@
+.robo-movie {
+  padding: 2rem;
+  & > .robo-caption {
+    border-bottom: 1px solid $sub-text;
+    padding: 2rem 0;
+    text-align: center;
+
+    & > .robo {
+      font-size: 3rem;
+      color: $style-special;
+    }
+    & > .robo-title {
+      color: $style-white;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    & > .robo-text {
+      color: $sub-text;
+      text-align: center;
+    }
+  }
+  & > .robo-categorize {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+
+    & > .robo-category {
+      background-color: transparent;
+      color: $style-white;
+      border-radius: 0.5rem;
+      padding: 0.2em 0.7rem;
+      border: 1px solid $movie-order;
+      position: relative;
+
+      &:hover,&:focus {
+        background-color: $movie-order;
+      }
+
+      i {
+        font-size: small;
+      }
+
+      & > .robo-menu {
+        background-color: $user-actions;
+        position: absolute;
+        top: 100%;
+        padding: .5rem 0;
+        left: 0;
+        min-width: 120px;
+        width: max-content;
+        text-align: left;
+        display: none;
+
+
+        & > .robo-item{
+          & > .robo-link{
+            color: $style-white;
+            padding: .3rem 1rem;
+            display: block;
+
+            &:hover{
+              background-color: $new-movie;
+            }
+          }
+        }
+      }      
+    }
+
+    & > .robo-btn {
+      color: $style-white;
+      background-color: $style-special;
+      border-radius: 0.5rem;
+      padding: 0.2em 0.7rem;
+
+      &:hover{
+        background-color: $style-special-dark;
+      }
+    }
+  }
+}
