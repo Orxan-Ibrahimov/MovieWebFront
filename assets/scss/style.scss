@@ -350,6 +350,7 @@ main {
         .genres {
           display: flex;
           justify-content: center;
+          flex-wrap: wrap;
           .category {
             font-size: x-small;
             font-weight: 700;

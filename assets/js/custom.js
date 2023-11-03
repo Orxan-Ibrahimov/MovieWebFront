@@ -2,6 +2,16 @@ $(document).ready(function () {
   let IsSended = false;
   let visible = false;
 
+  $("#register").click(function (e) { 
+    e.preventDefault();    
+    $(".login").slideDown(function(params) {
+      $(".make-blur").show();
+      $("body").css({
+        "overflow" : "hidden"
+      });
+    });
+  });
+
   $(".user").click(function (e) { 
     e.preventDefault();
     e.stopPropagation();
@@ -23,9 +33,19 @@ $(document).ready(function () {
   $(document).click(function (e) {
     e.stopPropagation();
     $(".robo-menu").hide();         
-    $(".user-actions").hide();   
+    $(".user-actions").hide(); 
+    
+  });
+  $(".make-blur").click(function(params) {
+    $(".login").hide();
+    $(this).hide();
   });
 
+  $(".login-box .login .login-close").click(function(params) {
+    $(".login").hide();
+    $(".make-blur").hide();
+  });
+  
   $(".robo-category").click(function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -53,6 +73,7 @@ $(document).ready(function () {
     e.preventDefault();
     $("footer .about-us").removeClass("makeBlur");
     $(".read-btn").remove();
+    
   });
 
   $(".spoiler-box").click(function (e) {

@@ -22,7 +22,8 @@
   }
   & > .robo-categorize {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 2rem 0;
 
     & > .robo-category {
@@ -32,6 +33,7 @@
       padding: 0.2em 0.7rem;
       border: 1px solid $movie-order;
       position: relative;
+      margin: .5rem;
 
       &:hover,&:focus {
         background-color: $movie-order;

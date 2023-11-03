@@ -21,6 +21,38 @@
     <title>Hdfilmcehennemi | Film izle | HD Film izle</title>
   </head>
   <body>
+
+    <div class="login-box">
+      <div class="make-blur"></div>
+    
+    <form class="login">
+     <div class="login-header">
+      <h4 class="text-white mb-0">Giris Yap</h4>
+      <span class="login-close">&times;</span>
+     </div>
+     <div class="login-body">
+      <div class="login-input-group">
+        <label for="username">Kullanıcı Adı</label>
+        <input class="form-control" type="text" id="username" />
+      </div>
+      <div class="login-input-group">
+        <label for="password">Şifre</label>
+        <input class="form-control" type="password" id="password" />
+      </div>
+     </div>
+     <div class="login-footer">
+      <div class="d-flex justify-content-between my-3">
+      <a class="d-inline-block text-white small" href="#">E-mail Aktivasyon</a>
+      <a class="d-inline-block text-white small" href="#">Sifremi Unutdum</a>
+    </div>     
+     <a href="#" class="signIn rounded">
+      <i class="fa-solid fa-lock"></i> 
+      Giris Yap
+      </a>
+    </div>
+    </form>
+    </div>
+
     <header>
       <div class="container-fluid container-lg hdf-header">
         <div class="row">
@@ -94,18 +126,19 @@
                   placeholder="Film veya Dizi Ara"
                 />
               </div>
-              <!-- <ul class="account-list">
+
+              <ul class="account-list">
                 <li class="account-item">
                   <a href="#" class="account-link">Kayit Ol</a>
                 </li>
                 <li class="account-item">
-                  <a href="#" class="account-link lock rounded"
+                  <a href="#" id="register" class="account-link lock rounded"
                     ><i class="fa-solid fa-lock"></i> Giris Yap</a
                   >
                 </li>
-              </ul> -->
+              </ul>
 
-              <ul class="account-list signed">
+              <!-- <ul class="account-list signed">
                 <li class="account-item">
                   <a href="#" class="account-user user">
                     <img src="assets/images/avatars/avatar.png" alt="user" />
@@ -145,7 +178,7 @@
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
           <div class="col-12 hdf-short-menu">
