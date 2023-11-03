@@ -282,7 +282,7 @@ body::-webkit-scrollbar-thumb:hover {
   color: #fff;
 }
 
-.login-box > .login {
+.authorization-box > .authorization {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -293,37 +293,37 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 2;
   display: none;
 }
-.login-box > .login > .login-header {
+.authorization-box > .authorization > .authorization-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.login-box > .login > .login-header > .login-close {
+.authorization-box > .authorization > .authorization-header > .authorization-close {
   cursor: pointer;
   color: #fff;
   font-size: 32px;
   font-weight: 800;
 }
-.login-box > .login > .login-body > .login-input-group {
+.authorization-box > .authorization > .authorization-body > .authorization-input-group {
   margin: 1rem 0;
 }
-.login-box > .login > .login-body > .login-input-group > label {
+.authorization-box > .authorization > .authorization-body > .authorization-input-group > label {
   color: #fff;
   margin-bottom: 0.5rem;
 }
-.login-box > .login > .login-body > .login-input-group > input:focus {
+.authorization-box > .authorization > .authorization-body > .authorization-input-group > input:focus {
   box-shadow: none;
 }
-.login-box > .login > .login-footer .signIn {
+.authorization-box > .authorization > .authorization-footer .signIn {
   display: inline-block;
   background-color: #dc3545;
   color: #fff;
   padding: 0.5rem;
 }
-.login-box > .login > .login-footer .signIn:hover {
+.authorization-box > .authorization > .authorization-footer .signIn:hover {
   background-color: #bb2d3b;
 }
-.login-box > .make-blur {
+.authorization-box > .make-blur {
   position: absolute;
   background-color: #000;
   opacity: 0.5;

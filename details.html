@@ -22,32 +22,62 @@
   </head>
   <body>
 
-    <div class="login-box">
+    <div class="authorization-box">
       <div class="make-blur"></div>
+
+      <form id="login" class="authorization">
+        <div class="authorization-header">
+         <h4 class="text-white mb-0">Giris Yap</h4>
+         <span class="authorization-close">&times;</span>
+        </div>
+        <div class="authorization-body">
+         <div class="authorization-input-group">
+           <label for="username">Kullanıcı Adı</label>
+           <input class="form-control" type="text" id="username" />
+         </div>
+         <div class="authorization-input-group">
+           <label for="password">Şifre</label>
+           <input class="form-control" type="password" id="password" />
+         </div>
+        </div>
+        <div class="authorization-footer">
+         <div class="d-flex justify-content-between my-3">
+         <a class="d-inline-block text-white small" href="#">E-mail Aktivasyon</a>
+         <a class="d-inline-block text-white small" href="#">Sifremi Unutdum</a>
+       </div>     
+        <a href="#" class="signIn rounded">
+         <i class="fa-solid fa-lock"></i> 
+         Giris Yap
+         </a>
+       </div>
+       </form>
     
-    <form class="login">
-     <div class="login-header">
-      <h4 class="text-white mb-0">Giris Yap</h4>
-      <span class="login-close">&times;</span>
+    <form id="register" class="authorization">
+     <div class="authorization-header">
+      <h4 class="text-white mb-0">Kayıt ol</h4>
+      <span class="authorization-close">&times;</span>
      </div>
-     <div class="login-body">
-      <div class="login-input-group">
+     <div class="authorization-body">
+      <div class="authorization-input-group">
+        <label for="email">E-Posta</label>
+        <input class="form-control" type="email" id="email" />
+      </div>
+      <div class="authorization-input-group">
         <label for="username">Kullanıcı Adı</label>
         <input class="form-control" type="text" id="username" />
       </div>
-      <div class="login-input-group">
+      <div class="authorization-input-group">
         <label for="password">Şifre</label>
         <input class="form-control" type="password" id="password" />
       </div>
+      <div class="authorization-input-group">
+        <label for="password-again">Şifre Tekrar</label>
+        <input class="form-control" type="password" id="password-again" />
+      </div>
      </div>
-     <div class="login-footer">
-      <div class="d-flex justify-content-between my-3">
-      <a class="d-inline-block text-white small" href="#">E-mail Aktivasyon</a>
-      <a class="d-inline-block text-white small" href="#">Sifremi Unutdum</a>
-    </div>     
+     <div class="authorization-footer d-flex justify-content-end">           
      <a href="#" class="signIn rounded">
-      <i class="fa-solid fa-lock"></i> 
-      Giris Yap
+      Kayıt Ol
       </a>
     </div>
     </form>
@@ -129,10 +159,10 @@
 
               <ul class="account-list">
                 <li class="account-item">
-                  <a href="#" class="account-link">Kayit Ol</a>
+                  <a href="#" id="register-btn" class="account-link">Kayit Ol</a>
                 </li>
                 <li class="account-item">
-                  <a href="#" id="register" class="account-link lock rounded"
+                  <a href="#" id="login-btn" class="account-link lock rounded"
                     ><i class="fa-solid fa-lock"></i> Giris Yap</a
                   >
                 </li>
@@ -242,10 +272,10 @@
               </div>
               <ul class="account-list">
                 <li class="account-item">
-                  <a href="#" class="account-link">Kayit Ol</a>
+                  <a href="#"  class="account-link">Kayit Ol</a>
                 </li>
                 <li class="account-item">
-                  <a href="#" class="account-link lock rounded"
+                  <a href="#" id="login-btn" class="account-link lock rounded"
                     ><i class="fa-solid fa-lock"></i> Giris Yap</a
                   >
                 </li>

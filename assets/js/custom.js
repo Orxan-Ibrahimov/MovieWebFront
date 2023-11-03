@@ -1,11 +1,21 @@
 $(document).ready(function () {
   let IsSended = false;
   let visible = false;
-
-  $("#register").click(function (e) { 
+  
+  $("#login-btn").click(function (e) { 
     e.preventDefault();    
-    $(".login").slideDown(function(params) {
-      $(".make-blur").show();
+    $(".authorization-box #login").slideDown(function(params) {
+      $(".authorization-box .make-blur").show();
+      $("body").css({
+        "overflow" : "hidden"
+      });
+    });
+  });
+
+  $("#register-btn").click(function (e) { 
+    e.preventDefault();    
+    $(".authorization-box #register").slideDown(function(params) {
+      $(".authorization-box .make-blur").show();
       $("body").css({
         "overflow" : "hidden"
       });
@@ -37,12 +47,14 @@ $(document).ready(function () {
     
   });
   $(".make-blur").click(function(params) {
-    $(".login").hide();
+    $("#login").hide();
+    $("#register").hide();
     $(this).hide();
   });
 
-  $(".login-box .login .login-close").click(function(params) {
-    $(".login").hide();
+  $(".authorization-close").click(function(params) {
+    $("#login").hide();
+    $("#register").hide();
     $(".make-blur").hide();
   });
   
